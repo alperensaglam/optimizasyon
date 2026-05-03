@@ -1,0 +1,174 @@
+"""
+model/cflp.py
+
+Capacitated Facility Location Problem (CFLP) solver.
+
+Interface
+---------
+solve_cflp(w, t, r, alpha, Q, Q0, method="cbc", time_limit=120)
+
+    w      : np.ndarray (n,)    — demand weights (population per neighborhood)
+    t      : np.ndarray (n, n)  — travel time matrix in hours; t[i,j] = time from i to DC at j
+    r      : np.ndarray (n,)    — commercial rent per m² for each candidate DC location
+    alpha  : float              — opening cost scaling parameter
+    Q      : float              — DC capacity in population units
+    Q0     : float              — reference capacity for cost normalization
+    method : "cbc" | "greedy"
+    time_limit : int            — solver time limit in seconds (CBC only)
+
+    Returns dict:
+        y         np.ndarray (n,)    — 1 if DC opened at location j, else 0
+        z         np.ndarray (n, n)  — z[i,j]=1 if neighborhood i assigned to DC j
+        objective float              — total cost (opening + service)
+        runtime   float              — wall-clock seconds
+        gap       float              — optimality gap (0.0 for greedy)
+
+Module layout
+-------------
+  _solve_cbc    — exact MILP via PuLP/CBC  (Alperen)
+  _solve_greedy — greedy-add heuristic     (Hasan)
+  _reassign     — capacity-constrained assignment helper
+"""
+
+import time
+import numpy as np
+
+
+# ── public interface ──────────────────────────────────────────────────────────
+
+def solve_cflp(w, t, r, alpha, Q, Q0, method="cbc", time_limit=120):
+    """Solve the Capacitated Facility Location Problem."""
+    w = np.asarray(w, dtype=float)
+    t = np.asarray(t, dtype=float)
+    r = np.asarray(r, dtype=float)
+
+    # Opening cost: f_j = alpha * r̄_d(j) * sqrt(Q / Q0)
+    f = alpha * r * np.sqrt(Q / Q0)
+
+    if method == "cbc":
+        return _solve_cbc(w, t, f, Q, time_limit)
+    elif method == "greedy":
+        return _solve_greedy(w, t, f, Q)
+    else:
+        raise ValueError(f"Unknown method: {method!r}. Use 'cbc' or 'greedy'.")
+
+
+# ── CBC exact solver ──────────────────────────────────────────────────────────
+
+def _solve_cbc(w, t, f, Q, time_limit):
+    """Exact MILP via PuLP/CBC. To be implemented by Alperen."""
+    raise NotImplementedError("CBC solver not yet implemented.")
+
+
+# ── Greedy-Add Heuristic ──────────────────────────────────────────────────────
+
+def _solve_greedy(w, t, f, Q):
+    """Greedy-add heuristic for CFLP.
+
+    Each iteration opens the DC candidate with the highest marginal gain:
+        gain(j) = Σ_i w_i * max(0, current_cost_i − t_ij) − f_j
+
+    After each opening, neighborhoods are re-assigned to open DCs respecting
+    capacity Q. Stops when no candidate yields a positive gain and all
+    neighborhoods are assigned.
+    """
+    t0 = time.time()
+    n = len(w)
+
+    open_mask = np.zeros(n, dtype=bool)
+    assign = np.full(n, -1, dtype=int)        # assign[i] = DC index for neighborhood i
+    assign_cost = np.full(n, np.inf)          # current travel cost per neighborhood
+
+    while True:
+        # ── compute gain for every closed candidate DC (vectorized) ──────────
+        # savings[j] = Σ_i w_i * max(0, assign_cost[i] − t[i,j])
+        savings = (w[:, None] * np.maximum(0.0, assign_cost[:, None] - t)).sum(axis=0)
+        gains = savings - f
+        gains[open_mask] = -np.inf
+
+        best_j = int(np.argmax(gains))
+        best_gain = float(gains[best_j])
+
+        if best_gain <= 0.0:
+            # No improvement — stop if all neighborhoods are assigned
+            if not np.any(assign == -1):
+                break
+            # Otherwise force-open the cheapest remaining DC to ensure feasibility
+            closed = np.where(~open_mask)[0]
+            if len(closed) == 0:
+                break
+            unassigned = np.where(assign == -1)[0]
+            force_cost = (
+                f[closed]
+                + (w[unassigned, None] * t[np.ix_(unassigned, closed)]).sum(axis=0)
+            )
+            best_j = int(closed[np.argmin(force_cost)])
+
+        open_mask[best_j] = True
+        assign, assign_cost = _reassign(w, t, np.where(open_mask)[0], Q)
+
+    # ── build result arrays ───────────────────────────────────────────────────
+    y = open_mask.astype(float)
+
+    z = np.zeros((n, n))
+    valid = assign >= 0
+    z[np.where(valid)[0], assign[valid]] = 1.0
+
+    open_cost = float(f @ y)
+    valid_idx = np.where(valid)[0]
+    service_cost = float(np.dot(w[valid_idx], t[valid_idx, assign[valid_idx]]))
+    objective = open_cost + service_cost
+
+    return {
+        "y":         y,
+        "z":         z,
+        "objective": float(objective),
+        "runtime":   float(time.time() - t0),
+        "gap":       0.0,
+    }
+
+
+# ── Assignment helper ─────────────────────────────────────────────────────────
+
+def _reassign(w, t, open_arr, Q):
+    """Capacity-constrained greedy assignment over a fixed set of open DCs.
+
+    Neighborhoods are processed in ascending order of their minimum travel
+    cost to any open DC (most-constrained first). Each neighborhood is
+    assigned to its cheapest feasible open DC that still has remaining
+    capacity.
+
+    Parameters
+    ----------
+    w        : np.ndarray (n,)
+    t        : np.ndarray (n, n)
+    open_arr : np.ndarray (k,)  — indices of currently open DCs
+    Q        : float            — capacity per DC
+
+    Returns
+    -------
+    assign      : np.ndarray (n,)  — DC index for each neighborhood (-1 if unassigned)
+    assign_cost : np.ndarray (n,)  — travel cost for each neighborhood (inf if unassigned)
+    """
+    n = len(w)
+    k = len(open_arr)
+    assign = np.full(n, -1, dtype=int)
+    load = np.zeros(k)               # load[idx] = population at open_arr[idx]
+
+    t_open = t[:, open_arr]          # (n, k) — travel times to open DCs only
+    order = np.argsort(t_open.min(axis=1))   # process lowest-min-cost first
+
+    for i in order:
+        dc_order = np.argsort(t_open[i])     # open DCs sorted by distance from i
+        for idx in dc_order:
+            if load[idx] + w[i] <= Q:
+                assign[i] = open_arr[idx]
+                load[idx] += w[i]
+                break
+
+    assign_cost = np.where(
+        assign >= 0,
+        t[np.arange(n), np.where(assign >= 0, assign, 0)],
+        np.inf,
+    )
+    return assign, assign_cost
