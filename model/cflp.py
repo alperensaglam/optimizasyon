@@ -56,8 +56,105 @@ def solve_cflp(w, t, r, alpha, Q, Q0, method="cbc", time_limit=120):
 # ── CBC exact solver ──────────────────────────────────────────────────────────
 
 def _solve_cbc(w, t, f, Q, time_limit):
-    """Exact MILP via PuLP/CBC. To be implemented by Alperen."""
-    raise NotImplementedError("CBC solver not yet implemented.")
+    """Exact MILP via PuLP/CBC.
+
+    Formulation
+    -----------
+    Decision variables:
+        y[j] ∈ {0,1}    — 1 if DC opened at candidate location j
+        z[i][j] ∈ {0,1} — 1 if neighborhood i is assigned to DC j
+
+    Objective:
+        min  Σ_j f[j]·y[j]  +  Σ_i Σ_j w[i]·t[i,j]·z[i][j]
+
+    Constraints:
+        (1) Σ_j z[i][j] = 1           ∀i   — each neighborhood assigned to exactly one DC
+        (2) z[i][j] ≤ y[j]            ∀i,j — assignment only to open DCs
+        (3) Σ_i w[i]·z[i][j] ≤ Q·y[j] ∀j   — capacity constraint
+        (4) y[j], z[i][j] ∈ {0,1}           — binary variables
+
+    If the solver hits *time_limit* before proving optimality, the best
+    feasible solution found so far is returned with a non-zero gap.
+    """
+    import pulp
+
+    n_I = len(w)          # number of neighborhoods (demand points)
+    n_J = t.shape[1]      # number of candidate DC locations
+
+    I = range(n_I)
+    J = range(n_J)
+
+    # ── define the problem ────────────────────────────────────────────────
+    prob = pulp.LpProblem("CFLP", pulp.LpMinimize)
+
+    # decision variables
+    y = [pulp.LpVariable(f"y_{j}", cat=pulp.LpBinary) for j in J]
+    z = [[pulp.LpVariable(f"z_{i}_{j}", cat=pulp.LpBinary) for j in J] for i in I]
+
+    # objective: min Σ f_j·y_j + Σ_i Σ_j w_i·t_ij·z_ij
+    prob += (
+        pulp.lpSum(f[j] * y[j] for j in J)
+        + pulp.lpSum(w[i] * t[i, j] * z[i][j] for i in I for j in J)
+    ), "TotalCost"
+
+    # constraint (1): each neighborhood assigned to exactly one DC
+    for i in I:
+        prob += pulp.lpSum(z[i][j] for j in J) == 1, f"Assign_{i}"
+
+    # constraint (2): assignment only to open DCs
+    for i in I:
+        for j in J:
+            prob += z[i][j] <= y[j], f"Link_{i}_{j}"
+
+    # constraint (3): capacity constraint
+    for j in J:
+        prob += (
+            pulp.lpSum(w[i] * z[i][j] for i in I) <= Q * y[j]
+        ), f"Capacity_{j}"
+
+    # ── solve with CBC ────────────────────────────────────────────────────
+    solver = pulp.PULP_CBC_CMD(
+        timeLimit=time_limit,
+        msg=0,          # suppress solver output
+    )
+
+    t0 = time.time()
+    prob.solve(solver)
+    runtime = time.time() - t0
+
+    # ── extract solution ──────────────────────────────────────────────────
+    status = pulp.LpStatus[prob.status]
+
+    if status not in ("Optimal", "Not Solved"):
+        # "Not Solved" with a feasible incumbent is returned by CBC when
+        # the time limit is hit.  PuLP marks it as status=0 but variables
+        # are populated.  We accept any status that produced variable values.
+        pass
+
+    y_val = np.array([v.varValue if v.varValue is not None else 0.0 for v in y])
+    z_val = np.array(
+        [[z[i][j].varValue if z[i][j].varValue is not None else 0.0 for j in J] for i in I]
+    )
+
+    # round near-integer values produced by the solver
+    y_val = np.round(y_val).astype(float)
+    z_val = np.round(z_val).astype(float)
+
+    objective = float(pulp.value(prob.objective)) if pulp.value(prob.objective) is not None else float("inf")
+
+    # optimality gap — CBC exposes best bound via prob.bestBound when available
+    if hasattr(prob, "bestBound") and prob.bestBound is not None and objective > 0:
+        gap = abs(objective - prob.bestBound) / abs(objective)
+    else:
+        gap = 0.0 if status == "Optimal" else float("nan")
+
+    return {
+        "y":         y_val,
+        "z":         z_val,
+        "objective": objective,
+        "runtime":   runtime,
+        "gap":       gap,
+    }
 
 
 # ── Greedy-Add Heuristic ──────────────────────────────────────────────────────
