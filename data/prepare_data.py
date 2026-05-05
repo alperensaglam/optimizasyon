@@ -135,33 +135,79 @@ df.index.name = "neighborhood_id"
 df = df.reset_index()
 
 print(f"   Final: {len(df)} neighborhoods")
-df.to_csv(f"{OUT}/neighborhoods.csv", index=False)
-print(f"   Saved → {OUT}/neighborhoods.csv")
 
 # ── 4. Rent data ──────────────────────────────────────────────────────────────
 
-print("4. Processing Endeksa rent data...")
-df_rent = pd.read_csv(f"{RAW}/istanbul_ilce_kira_fiyatlari.csv")
-df_rent = df_rent.rename(columns={
-    "İlçe": "district",
-    "Metrekare_Kira_Bedeli_TL": "avg_rent_per_m2",
-})[["district", "avg_rent_per_m2"]]
-df_rent["district"] = df_rent["district"].str.upper()
-df_rent = df_rent.dropna(subset=["avg_rent_per_m2"])
+print("4. Processing Endeksa rent data (neighborhood + district)...")
 
-# Assign median rent to districts missing from the dataset
-median_rent = df_rent["avg_rent_per_m2"].median()
-missing_districts = set(df["district"].unique()) - set(df_rent["district"])
-if missing_districts:
-    fill = pd.DataFrame({
-        "district": list(missing_districts),
-        "avg_rent_per_m2": median_rent,
-    })
-    df_rent = pd.concat([df_rent, fill], ignore_index=True)
-    print(f"   {len(missing_districts)} districts filled with median rent ({median_rent:.0f} TL/m²): {missing_districts}")
+# Parse district level data first
+df_dist_rent = pd.read_csv(f"{RAW}/istanbul_tum_ilceler.csv", sep=";")
+def parse_rent(val):
+    if pd.isna(val) or val == "-" or "₺" not in str(val): return np.nan
+    v = str(val).split("₺")[0].replace(".", "").strip()
+    try: return float(v)
+    except: return np.nan
 
-df_rent.to_csv(f"{OUT}/rents.csv", index=False)
-print(f"   Saved → {OUT}/rents.csv")
+df_dist_rent["avg_rent_per_m2"] = df_dist_rent["Birim Fiyatı (₺/m2)"].apply(parse_rent)
+df_dist_rent["district"] = df_dist_rent["Mahalle"].apply(normalize)
+df_dist_rent = df_dist_rent.dropna(subset=["avg_rent_per_m2"])
+district_rents = dict(zip(df_dist_rent["district"], df_dist_rent["avg_rent_per_m2"]))
+median_district_rent = df_dist_rent["avg_rent_per_m2"].median()
+
+# Parse neighborhood level data
+df_mah_rent = pd.read_csv(f"{RAW}/istanbul_tum_mahalleler.csv", sep=";")
+df_mah_rent["rent"] = df_mah_rent["Birim Fiyatı (₺/m2)"].apply(parse_rent)
+df_mah_rent["name"] = df_mah_rent["Mahalle"].apply(normalize)
+df_mah_rent["district"] = df_mah_rent["İlçe"].apply(normalize)
+df_mah_rent["_rent_key"] = df_mah_rent["name"] + "|" + df_mah_rent["district"]
+df_mah_rent = df_mah_rent.dropna(subset=["rent"])
+mah_rents = dict(zip(df_mah_rent["_rent_key"], df_mah_rent["rent"]))
+
+ALIASES_RENT = {
+    "AKŞEMSETTİN|SULTANBEYLİ": "AKŞEMSEDDİN|SULTANBEYLİ",
+    "ATAKÖY 2-5-6. KISIM|BAKIRKÖY": "ATAKÖY 2. 5. 6. KISIM|BAKIRKÖY",
+    "AŞIKVEYSEL|ATAŞEHİR": "AŞIK VEYSEL|ATAŞEHİR",
+    "KAMER HATUN|BEYOĞLU": "KAMERHATUN|BEYOĞLU",
+    "KEÇECİ PİRİ|BEYOĞLU": "KEÇECİPİRİ|BEYOĞLU",
+    "KUMKÖY (KİLYOS)|SARIYER": "KUMKÖY|SARIYER",
+    "MERKEZ|BEYKOZ": "BEYKOZ MERKEZ|BEYKOZ",
+    "MERKEZ|EYÜPSULTAN": "EYÜP MERKEZ|EYÜPSULTAN",
+    "MURAT ÇESME|BÜYÜKÇEKMECE": "MURAT ÇEŞME|BÜYÜKÇEKMECE",
+    "MUSTAFA KEMALPAŞA|AVCILAR": "MUSTAFA KEMAL PAŞA|AVCILAR",
+    "MİMAR SİNAN|BÜYÜKÇEKMECE": "MİMARSİNAN|BÜYÜKÇEKMECE",
+    "NENEHATUN|ARNAVUTKÖY": "NENE HATUN|ARNAVUTKÖY",
+    "NİŞANCI|EYÜPSULTAN": "NİŞANCA|EYÜPSULTAN",
+    "ORHANGAZİ|SULTANBEYLİ": "ORHAN GAZİ|SULTANBEYLİ",
+    "SURURİ MEHMET EFENDİ|BEYOĞLU": "SURURİ|BEYOĞLU",
+    "ÇİFTLİK|BEYKOZ": "ÇAVUŞBAŞI ÇİFTLİK|BEYKOZ",
+    "İSMET PAŞA|BAYRAMPAŞA": "İSMETPAŞA|BAYRAMPAŞA",
+    "İSMETPAŞA|SULTANGAZİ": "İSMET PAŞA|SULTANGAZİ",
+    "PİRİPAŞA|BEYOĞLU": "PİRİ MEHMET PAŞA|BEYOĞLU",
+}
+
+# Add rent column to df
+df["_rent_key"] = (df["name"] + "|" + df["district"]).replace(ALIASES_RENT)
+df["rent_per_m2"] = df["_rent_key"].map(mah_rents)
+
+missing_mah = df["rent_per_m2"].isna().sum()
+print(f"   {len(df) - missing_mah} neighborhoods matched with mahalle rent")
+
+# Fill missing mahalle rent with district rent
+df.loc[df["rent_per_m2"].isna(), "rent_per_m2"] = df.loc[df["rent_per_m2"].isna(), "district"].map(district_rents)
+missing_dist = df["rent_per_m2"].isna().sum()
+print(f"   {missing_mah - missing_dist} filled with district rent")
+
+# Fill remaining with median district rent
+if missing_dist > 0:
+    df.loc[df["rent_per_m2"].isna(), "rent_per_m2"] = median_district_rent
+    print(f"   {missing_dist} filled with median district rent ({median_district_rent:.0f})")
+
+df = df.drop(columns=["_rent_key"])
+df.to_csv(f"{OUT}/neighborhoods.csv", index=False)
+print(f"   Saved → {OUT}/neighborhoods.csv (with rent_per_m2)")
+
+df_dist_rent[["district", "avg_rent_per_m2"]].to_csv(f"{OUT}/rents.csv", index=False)
+print(f"   Saved → {OUT}/rents.csv (district level, for compatibility)")
 
 # ── 5. IBB Traffic API → τ multipliers ───────────────────────────────────────
 

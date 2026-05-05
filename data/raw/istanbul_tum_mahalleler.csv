@@ -1,64 +1,967 @@
 ﻿İlçe;Mahalle;Birim Fiyatı (₺/m2);Ort. Değer;Amortisman;Getiri;Yıllık Değişim
 Adalar;Burgazada;528 ₺/m 2;60.691 ₺;19 yıl;%5,34;%19,05
-Adalar;Maden;578 ₺/m 2;- ₺;-;-;-
-Adalar;Nizam;509 ₺/m 2;- ₺;-;-;-
 Adalar;Heybeliada;581 ₺/m 2;- ₺;-;-;-
 Adalar;Kınalıada;414 ₺/m 2;- ₺;-;-;-
-Bakırköy;Osmaniye;524 ₺/m 2;43.487 ₺;13 yıl;%7,90;%51,95
-Bakırköy;Yeşilköy;654 ₺/m 2;68.655 ₺;15 yıl;%6,69;%40,59
-Bakırköy;Yenimahalle;659 ₺/m 2;81.069 ₺;-;-;%27,83
-Bakırköy;Sakızağacı;452 ₺/m 2;32.091 ₺;19 yıl;%5,26;%28,98
-Bakırköy;Cevizlik;557 ₺/m 2;37.321 ₺;14 yıl;%7,01;%52,16
-Bakırköy;Zeytinlik;562 ₺/m 2;58.989 ₺;18 yıl;%5,63;%38,74
-Bakırköy;Yeşilyurt;675 ₺/m 2;55.310 ₺;10 yıl;%10,15;%-12,86
-Bakırköy;Ataköy 7 8 9 10. Kısım;751 ₺/m 2;113.391 ₺;14 yıl;%7,05;%29,56
-Bakırköy;Kartaltepe;537 ₺/m 2;64.426 ₺;18 yıl;%5,55;%44,52
-Bakırköy;Zuhuratbaba;662 ₺/m 2;47.658 ₺;15 yıl;%6,77;%47,30
-Bakırköy;Şenlikköy;516 ₺/m 2;103.716 ₺;24 yıl;%4,13;%17,91
+Adalar;Maden;578 ₺/m 2;- ₺;-;-;-
+Adalar;Nizam;509 ₺/m 2;- ₺;-;-;-
+Arnavutköy;Adnan Menderes;186 ₺/m 2;20.495 ₺;19 yıl;%5,33;%25,32
+Arnavutköy;Anadolu;228 ₺/m 2;35.265 ₺;16 yıl;%6,15;%46,48
+Arnavutköy;Arnavutköy Merkez;255 ₺/m 2;45.580 ₺;19 yıl;%5,34;%17,76
+Arnavutköy;Atatürk;247 ₺/m 2;48.836 ₺;14 yıl;%7,33;%89,77
+Arnavutköy;Baklalı;1.095 ₺/m 2;- ₺;-;-;-
+Arnavutköy;Balaban;-;-;-;-;-
+Arnavutköy;Boğazköy İstiklal;170 ₺/m 2;35.287 ₺;17 yıl;%6,02;%7,94
+Arnavutköy;Bolluca;193 ₺/m 2;92.809 ₺;22 yıl;%4,47;%1,93
+Arnavutköy;Boyalık;-;-;-;-;-
+Arnavutköy;Çilingir;-;-;-;-;-
+Arnavutköy;Deliklikaya;243 ₺/m 2;575.036 ₺;10 yıl;%10,08;%19,06
+Arnavutköy;Dursunköy;357 ₺/m 2;23.888 ₺;-;-;%138,42
+Arnavutköy;Durusu;-;-;-;-;-
+Arnavutköy;Fatih;264 ₺/m 2;96.524 ₺;-;-;%47,52
+Arnavutköy;Hacımaşlı;-;-;-;-;-
+Arnavutköy;Hadımköy;357 ₺/m 2;216.366 ₺;19 yıl;%5,24;%67,94
+Arnavutköy;Haraççı;239 ₺/m 2;54.988 ₺;15 yıl;%6,65;%28,87
+Arnavutköy;Hastane;292 ₺/m 2;108.298 ₺;16 yıl;%6,21;%28,78
+Arnavutköy;Hicret;709 ₺/m 2;119.863 ₺;-;-;%461,25
+Arnavutköy;İmrahor;166 ₺/m 2;19.124 ₺;24 yıl;%4,12;%37,92
+Arnavutköy;İslambey;215 ₺/m 2;30.080 ₺;22 yıl;%4,51;%33,43
+Arnavutköy;Karaburun;283 ₺/m 2;34.569 ₺;21 yıl;%4,69;%23,66
+Arnavutköy;Karlıbayır;258 ₺/m 2;37.962 ₺;14 yıl;%7,15;%26,75
+Arnavutköy;Mareşal Fevzi Çakmak;184 ₺/m 2;68.399 ₺;43 yıl;%2,33;%0,73
+Arnavutköy;Mavigöl;227 ₺/m 2;75.567 ₺;26 yıl;%3,90;%14,77
+Arnavutköy;Mehmet Akif Ersoy;260 ₺/m 2;118.965 ₺;12 yıl;%8,12;%75,70
+Arnavutköy;Mustafa Kemal Paşa;279 ₺/m 2;- ₺;-;-;-
+Arnavutköy;Nene Hatun;198 ₺/m 2;42.265 ₺;26 yıl;%3,83;%23,81
+Arnavutköy;Ömerli;283 ₺/m 2;1.007.911 ₺;15 yıl;%6,86;%9,49
+Arnavutköy;Sazlıbosna;197 ₺/m 2;78.419 ₺;-;-;%-23,74
+Arnavutköy;Taşoluk;250 ₺/m 2;64.932 ₺;14 yıl;%7,34;%49,87
+Arnavutköy;Tayakadın;232 ₺/m 2;27.892 ₺;-;-;%-35,03
+Arnavutköy;Terkos;-;-;-;-;-
+Arnavutköy;Yassıören;399 ₺/m 2;- ₺;-;-;-
+Arnavutköy;Yavuz Selim;186 ₺/m 2;40.411 ₺;-;-;%38,52
+Arnavutköy;Yeniköy;-;-;-;-;-
+Arnavutköy;Yeşilbayır;203 ₺/m 2;174.628 ₺;22 yıl;%4,46;%6,21
+Arnavutköy;Yunus Emre;187 ₺/m 2;22.253 ₺;13 yıl;%8,00;%23,25
+Ataşehir;Aşık Veysel;256 ₺/m 2;- ₺;-;-;-
+Ataşehir;Atatürk;723 ₺/m 2;96.168 ₺;15 yıl;%6,82;%26,20
+Ataşehir;Barbaros;710 ₺/m 2;73.841 ₺;17 yıl;%5,95;%29,63
+Ataşehir;Esatpaşa;471 ₺/m 2;59.768 ₺;18 yıl;%5,49;%88,44
+Ataşehir;Ferhatpaşa;351 ₺/m 2;114.875 ₺;13 yıl;%7,46;%41,73
+Ataşehir;Fetih;309 ₺/m 2;84.145 ₺;23 yıl;%4,36;%8,44
+Ataşehir;İçerenköy;503 ₺/m 2;71.991 ₺;16 yıl;%6,29;%44,47
+Ataşehir;İnönü;426 ₺/m 2;48.582 ₺;21 yıl;%4,88;%42,64
+Ataşehir;Kayışdağı;386 ₺/m 2;44.022 ₺;14 yıl;%7,35;%95,70
+Ataşehir;Küçükbakkalköy;652 ₺/m 2;71.691 ₺;12 yıl;%8,15;%49,20
+Ataşehir;Mevlana;315 ₺/m 2;34.348 ₺;11 yıl;%8,89;%59,22
+Ataşehir;Mimar Sinan;406 ₺/m 2;30.473 ₺;13 yıl;%7,56;%33,68
+Ataşehir;Mustafa Kemal;384 ₺/m 2;38.759 ₺;-;-;%39,15
+Ataşehir;Örnek;539 ₺/m 2;100.198 ₺;13 yıl;%7,68;%101,66
+Ataşehir;Yeni Çamlıca;376 ₺/m 2;51.825 ₺;32 yıl;%3,15;%51,60
+Ataşehir;Yenisahra;420 ₺/m 2;71.873 ₺;18 yıl;%5,46;%66,98
+Ataşehir;Yenişehir;564 ₺/m 2;80.643 ₺;-;%13,11;%63,19
+Avcılar;Ambarlı;321 ₺/m 2;37.207 ₺;12 yıl;%8,48;%51,09
+Avcılar;Cihangir;404 ₺/m 2;78.750 ₺;10 yıl;%9,81;%37,88
+Avcılar;Denizköşkler;339 ₺/m 2;35.595 ₺;17 yıl;%5,83;%44,83
+Avcılar;Firuzköy;264 ₺/m 2;140.093 ₺;-;-;%36,75
+Avcılar;Gümüşpala;366 ₺/m 2;32.230 ₺;13 yıl;%7,77;%41,12
+Avcılar;Merkez;491 ₺/m 2;40.734 ₺;13 yıl;%7,89;%69,81
+Avcılar;Mustafa Kemal Paşa;284 ₺/m 2;33.224 ₺;16 yıl;%6,43;%35,80
+Avcılar;Tahtakale;427 ₺/m 2;104.637 ₺;19 yıl;%5,22;%26,32
+Avcılar;Üniversite;272 ₺/m 2;58.274 ₺;12 yıl;%8,05;%29,38
+Avcılar;Yeşilkent;196 ₺/m 2;35.695 ₺;-;-;%46,14
+Bağcılar;100. Yıl;257 ₺/m 2;27.260 ₺;19 yıl;%5,35;%26,81
+Bağcılar;15 Temmuz;250 ₺/m 2;60.040 ₺;20 yıl;%5,00;%16,14
+Bağcılar;Bağlar;303 ₺/m 2;111.640 ₺;17 yıl;%6,04;%40,79
+Bağcılar;Barbaros;242 ₺/m 2;29.467 ₺;18 yıl;%5,67;%24,67
+Bağcılar;Çınar;237 ₺/m 2;42.927 ₺;19 yıl;%5,23;%8,02
+Bağcılar;Demirkapı;213 ₺/m 2;36.237 ₺;17 yıl;%5,94;%17,88
+Bağcılar;Fatih;233 ₺/m 2;28.408 ₺;11 yıl;%9,13;%44,19
+Bağcılar;Fevzi Çakmak;260 ₺/m 2;34.018 ₺;18 yıl;%5,52;%62,89
+Bağcılar;Göztepe;340 ₺/m 2;45.578 ₺;21 yıl;%4,73;%28,20
+Bağcılar;Güneşli;243 ₺/m 2;45.633 ₺;22 yıl;%4,59;%13,75
+Bağcılar;Hürriyet;241 ₺/m 2;38.060 ₺;17 yıl;%5,75;%15,26
+Bağcılar;İnönü;249 ₺/m 2;31.394 ₺;12 yıl;%8,36;%28,88
+Bağcılar;Kazım Karabekir;210 ₺/m 2;25.383 ₺;19 yıl;%5,21;%0,24
+Bağcılar;Kemalpaşa;163 ₺/m 2;28.764 ₺;14 yıl;%7,07;%9,12
+Bağcılar;Kirazlı;233 ₺/m 2;35.902 ₺;16 yıl;%6,22;%8,68
+Bağcılar;Mahmutbey;432 ₺/m 2;132.522 ₺;20 yıl;%5,08;%22,79
+Bağcılar;Merkez;238 ₺/m 2;44.037 ₺;20 yıl;%5,04;%0,73
+Bağcılar;Sancaktepe;252 ₺/m 2;40.395 ₺;18 yıl;%5,58;%14,13
+Bağcılar;Yavuz Selim;263 ₺/m 2;38.434 ₺;12 yıl;%8,48;%41,22
+Bağcılar;Yenigün;281 ₺/m 2;33.738 ₺;14 yıl;%7,15;%45,30
+Bağcılar;Yenimahalle;232 ₺/m 2;- ₺;-;-;-
+Bağcılar;Yıldıztepe;192 ₺/m 2;- ₺;-;-;-
+Bahçelievler;Bahçelievler;780 ₺/m 2;94.421 ₺;13 yıl;%7,73;%66,09
+Bahçelievler;Cumhuriyet;294 ₺/m 2;28.483 ₺;19 yıl;%5,40;%30,03
+Bahçelievler;Çobançeşme;454 ₺/m 2;63.058 ₺;-;%13,28;%72,65
+Bahçelievler;Fevzi Çakmak;229 ₺/m 2;30.676 ₺;22 yıl;%4,62;%19,09
+Bahçelievler;Hürriyet;353 ₺/m 2;32.492 ₺;16 yıl;%6,43;%60,82
+Bahçelievler;Kocasinan Merkez;254 ₺/m 2;70.617 ₺;20 yıl;%5,12;%35,16
+Bahçelievler;Siyavuşpaşa;491 ₺/m 2;39.762 ₺;11 yıl;%8,72;%105,36
+Bahçelievler;Soğanlı;274 ₺/m 2;33.751 ₺;16 yıl;%6,45;%26,47
+Bahçelievler;Şirinevler;394 ₺/m 2;39.833 ₺;11 yıl;%8,85;%42,00
+Bahçelievler;Yenibosna Merkez;470 ₺/m 2;89.275 ₺;17 yıl;%5,94;%36,84
+Bahçelievler;Zafer;273 ₺/m 2;33.295 ₺;15 yıl;%6,84;%29,75
+Bakırköy;Ataköy 1. Kısım;734 ₺/m 2;110.841 ₺;18 yıl;%5,43;%85,64
+Bakırköy;Ataköy 2. 5. 6. Kısım;877 ₺/m 2;109.577 ₺;22 yıl;%4,63;%83,65
+Bakırköy;Ataköy 3-4-11. Kısım;649 ₺/m 2;64.271 ₺;16 yıl;%6,37;%62,65
+Bakırköy;Ataköy 7-8-9-10. Kısım;751 ₺/m 2;113.391 ₺;14 yıl;%7,05;%29,56
 Bakırköy;Basınköy;882 ₺/m 2;91.726 ₺;-;-;%228,11
-Beşiktaş;Vişnezade;998 ₺/m 2;174.637 ₺;-;%11,62;%38,77
-Beşiktaş;Sinanpaşa;654 ₺/m 2;39.871 ₺;11 yıl;%9,21;%10,97
-Beşiktaş;Muradiye;723 ₺/m 2;- ₺;-;-;-
-Beşiktaş;Cihannüma;581 ₺/m 2;54.573 ₺;16 yıl;%6,32;%41,58
-Beşiktaş;Türkali;833 ₺/m 2;51.664 ₺;12 yıl;%8,49;%75,55
+Bakırköy;Cevizlik;557 ₺/m 2;37.321 ₺;14 yıl;%7,01;%52,16
+Bakırköy;Kartaltepe;537 ₺/m 2;64.426 ₺;18 yıl;%5,55;%44,52
+Bakırköy;Osmaniye;524 ₺/m 2;43.487 ₺;13 yıl;%7,90;%51,95
+Bakırköy;Sakızağacı;452 ₺/m 2;32.091 ₺;19 yıl;%5,26;%28,98
+Bakırköy;Şenlikköy;516 ₺/m 2;103.716 ₺;24 yıl;%4,13;%17,91
+Bakırköy;Yenimahalle;659 ₺/m 2;81.069 ₺;-;-;%27,83
+Bakırköy;Yeşilköy;654 ₺/m 2;68.655 ₺;15 yıl;%6,69;%40,59
+Bakırköy;Yeşilyurt;675 ₺/m 2;55.310 ₺;10 yıl;%10,15;%-12,86
+Bakırköy;Zeytinlik;562 ₺/m 2;58.989 ₺;18 yıl;%5,63;%38,74
+Bakırköy;Zuhuratbaba;662 ₺/m 2;47.658 ₺;15 yıl;%6,77;%47,30
+Başakşehir;Altınşehir;253 ₺/m 2;44.608 ₺;19 yıl;%5,36;%49,65
+Başakşehir;Bahçeşehir 1. Kısım;454 ₺/m 2;97.997 ₺;17 yıl;%5,88;%0,62
+Başakşehir;Bahçeşehir 2. Kısım;415 ₺/m 2;50.622 ₺;17 yıl;%6,00;%22,91
+Başakşehir;Başak;482 ₺/m 2;166.609 ₺;12 yıl;%8,01;%43,72
+Başakşehir;Başakşehir;565 ₺/m 2;85.931 ₺;15 yıl;%6,76;%44,89
+Başakşehir;Güvercintepe;224 ₺/m 2;27.722 ₺;22 yıl;%4,50;%33,24
+Başakşehir;Kayabaşı;577 ₺/m 2;61.715 ₺;15 yıl;%6,59;%31,61
+Başakşehir;Şahintepe;225 ₺/m 2;34.660 ₺;50 yıl;%1,99;%30,83
+Başakşehir;Şamlar;362 ₺/m 2;34.390 ₺;22 yıl;%4,53;%23,15
+Başakşehir;Ziya Gökalp;462 ₺/m 2;96.984 ₺;22 yıl;%4,56;%19,82
+Bayrampaşa;Altıntepsi;251 ₺/m 2;25.116 ₺;16 yıl;%6,39;%12,58
+Bayrampaşa;Cevatpaşa;232 ₺/m 2;31.971 ₺;18 yıl;%5,41;%6,99
+Bayrampaşa;İsmetpaşa;311 ₺/m 2;25.828 ₺;18 yıl;%5,59;%19,91
+Bayrampaşa;Kartaltepe;294 ₺/m 2;31.479 ₺;12 yıl;%8,26;%40,27
+Bayrampaşa;Kocatepe;357 ₺/m 2;37.444 ₺;19 yıl;%5,18;%16,35
+Bayrampaşa;Muratpaşa;324 ₺/m 2;39.147 ₺;14 yıl;%6,95;%39,87
+Bayrampaşa;Orta;348 ₺/m 2;30.248 ₺;15 yıl;%6,46;%21,15
+Bayrampaşa;Terazidere;269 ₺/m 2;65.476 ₺;19 yıl;%5,26;%30,00
+Bayrampaşa;Vatan;270 ₺/m 2;34.615 ₺;21 yıl;%4,72;%20,34
+Bayrampaşa;Yenidoğan;336 ₺/m 2;31.605 ₺;18 yıl;%5,68;%19,67
+Bayrampaşa;Yıldırım;383 ₺/m 2;41.312 ₺;18 yıl;%5,60;%43,02
 Beşiktaş;Abbasağa;450 ₺/m 2;49.963 ₺;13 yıl;%7,96;%-26,88
-Beşiktaş;Yıldız;580 ₺/m 2;87.646 ₺;14 yıl;%7,25;%35,79
-Beşiktaş;Dikilitaş;793 ₺/m 2;115.846 ₺;12 yıl;%8,44;%56,69
-Beşiktaş;Gayrettepe;595 ₺/m 2;175.657 ₺;17 yıl;%5,85;%32,65
-Beşiktaş;Balmumcu;520 ₺/m 2;77.529 ₺;28 yıl;%3,56;%15,02
-Beşiktaş;Mecidiye;853 ₺/m 2;75.945 ₺;13 yıl;%7,65;%74,23
-Beşiktaş;Ortaköy;813 ₺/m 2;109.688 ₺;10 yıl;%10,41;%89,31
-Beşiktaş;Levazım;587 ₺/m 2;163.700 ₺;17 yıl;%5,90;%29,09
-Beşiktaş;Ulus;537 ₺/m 2;49.445 ₺;-;-;%85,90
-Beşiktaş;Kültür;873 ₺/m 2;47.134 ₺;22 yıl;%4,50;%46,96
-Beşiktaş;Nisbetiye;652 ₺/m 2;90.608 ₺;15 yıl;%6,52;%7,01
-Beşiktaş;Arnavutköy;922 ₺/m 2;102.303 ₺;13 yıl;%7,84;%20,49
-Beşiktaş;Bebek;992 ₺/m 2;86.270 ₺;10 yıl;%10,19;%19,62
-Beşiktaş;Etiler;770 ₺/m 2;97.003 ₺;18 yıl;%5,50;%15,03
 Beşiktaş;Akat;967 ₺/m 2;143.105 ₺;13 yıl;%7,51;%35,85
-Beşiktaş;Levent;1.005 ₺/m 2;338.523 ₺;12 yıl;%8,32;%19,76
+Beşiktaş;Arnavutköy;922 ₺/m 2;102.303 ₺;13 yıl;%7,84;%20,49
+Beşiktaş;Balmumcu;520 ₺/m 2;77.529 ₺;28 yıl;%3,56;%15,02
+Beşiktaş;Bebek;992 ₺/m 2;86.270 ₺;10 yıl;%10,19;%19,62
+Beşiktaş;Cihannüma;581 ₺/m 2;54.573 ₺;16 yıl;%6,32;%41,58
+Beşiktaş;Dikilitaş;793 ₺/m 2;115.846 ₺;12 yıl;%8,44;%56,69
+Beşiktaş;Etiler;770 ₺/m 2;97.003 ₺;18 yıl;%5,50;%15,03
+Beşiktaş;Gayrettepe;595 ₺/m 2;175.657 ₺;17 yıl;%5,85;%32,65
 Beşiktaş;Konaklar;824 ₺/m 2;107.882 ₺;25 yıl;%3,96;%83,80
+Beşiktaş;Kuruçeşme;750 ₺/m 2;96.775 ₺;30 yıl;%3,37;%15,97
+Beşiktaş;Kültür;873 ₺/m 2;47.134 ₺;22 yıl;%4,50;%46,96
+Beşiktaş;Levazım;587 ₺/m 2;163.700 ₺;17 yıl;%5,90;%29,09
+Beşiktaş;Levent;1.005 ₺/m 2;338.523 ₺;12 yıl;%8,32;%19,76
+Beşiktaş;Mecidiye;853 ₺/m 2;75.945 ₺;13 yıl;%7,65;%74,23
+Beşiktaş;Muradiye;723 ₺/m 2;- ₺;-;-;-
+Beşiktaş;Nisbetiye;652 ₺/m 2;90.608 ₺;15 yıl;%6,52;%7,01
+Beşiktaş;Ortaköy;813 ₺/m 2;109.688 ₺;10 yıl;%10,41;%89,31
+Beşiktaş;Sinanpaşa;654 ₺/m 2;39.871 ₺;11 yıl;%9,21;%10,97
+Beşiktaş;Türkali;833 ₺/m 2;51.664 ₺;12 yıl;%8,49;%75,55
+Beşiktaş;Ulus;537 ₺/m 2;49.445 ₺;-;-;%85,90
+Beşiktaş;Vişnezade;998 ₺/m 2;174.637 ₺;-;%11,62;%38,77
+Beşiktaş;Yıldız;580 ₺/m 2;87.646 ₺;14 yıl;%7,25;%35,79
+Beykoz;Acarlar;922 ₺/m 2;892.931 ₺;-;-;%31,43
+Beykoz;Akbaba;332 ₺/m 2;32.180 ₺;13 yıl;%7,50;%38,04
+Beykoz;Alibahadır;-;-;-;-;-
+Beykoz;Anadolu Hisarı;773 ₺/m 2;102.062 ₺;12 yıl;%8,44;%241,56
+Beykoz;Anadolu Kavağı;-;-;-;-;-
+Beykoz;Anadolufeneri;-;-;-;-;-
+Beykoz;Baklacı;378 ₺/m 2;65.714 ₺;41 yıl;%2,44;%24,30
+Beykoz;Beykoz Merkez;466 ₺/m 2;- ₺;-;-;-
+Beykoz;Bozhane;-;-;-;-;-
+Beykoz;Cumhuriyetköy;-;-;-;-;-
+Beykoz;Çamlıbahçe;278 ₺/m 2;28.676 ₺;21 yıl;%4,84;%39,99
+Beykoz;Çavuşbaşı Çiftlik;296 ₺/m 2;67.126 ₺;36 yıl;%2,76;%22,69
+Beykoz;Çengeldere;234 ₺/m 2;106.970 ₺;11 yıl;%8,87;%-10,14
+Beykoz;Çiğdem;350 ₺/m 2;39.938 ₺;33 yıl;%3,01;%34,97
+Beykoz;Çubuklu;337 ₺/m 2;23.226 ₺;18 yıl;%5,67;%32,70
+Beykoz;Dereseki;206 ₺/m 2;19.986 ₺;-;-;%-8,86
+Beykoz;Elmalı;414 ₺/m 2;176.731 ₺;-;-;%422,65
+Beykoz;Fatih;544 ₺/m 2;85.458 ₺;9 yıl;%10,90;%89,28
+Beykoz;Göksu;-;-;-;-;-
+Beykoz;Göllü;-;-;-;-;-
+Beykoz;Görele;445 ₺/m 2;158.537 ₺;25 yıl;%3,92;%0,36
+Beykoz;Göztepe;429 ₺/m 2;109.841 ₺;-;-;%2,74
 Beykoz;Gümüşsuyu;449 ₺/m 2;87.195 ₺;-;-;%84,89
 Beykoz;İncirköy;340 ₺/m 2;25.521 ₺;-;-;%53,18
-Beykoz;Paşabahçe;462 ₺/m 2;69.799 ₺;-;-;%59,35
-Beykoz;Çubuklu;337 ₺/m 2;23.226 ₺;18 yıl;%5,67;%32,70
+Beykoz;İshaklı;-;-;-;-;-
 Beykoz;Kanlıca;656 ₺/m 2;38.072 ₺;19 yıl;%5,21;%8,93
-Beykoz;Anadolu Hisarı;773 ₺/m 2;102.062 ₺;12 yıl;%8,44;%241,56
-Beykoz;Yeni Mahalle;462 ₺/m 2;13.404 ₺;-;-;%95,40
-Beykoz;Göztepe;429 ₺/m 2;109.841 ₺;-;-;%2,74
 Beykoz;Kavacık;424 ₺/m 2;66.212 ₺;14 yıl;%7,35;%38,47
+Beykoz;Kaynarca;-;-;-;-;-
+Beykoz;Kılıçlı;-;-;-;-;-
+Beykoz;Mahmutşevketpaşa;-;-;-;-;-
+Beykoz;Ortaçeşme;377 ₺/m 2;38.870 ₺;-;-;%48,55
+Beykoz;Öğümce;-;-;-;-;-
+Beykoz;Örnekköy;403 ₺/m 2;98.227 ₺;-;-;%2,36
+Beykoz;Paşabahçe;462 ₺/m 2;69.799 ₺;-;-;%59,35
+Beykoz;Paşamandıra;247 ₺/m 2;61.575 ₺;-;-;%6,72
+Beykoz;Polonezköy;-;-;-;-;-
+Beykoz;Poyrazköy;-;-;-;-;-
+Beykoz;Riva;995 ₺/m 2;- ₺;-;-;-
 Beykoz;Rüzgarlıbahçe;334 ₺/m 2;81.503 ₺;23 yıl;%4,29;%2,28
 Beykoz;Soğuksu;380 ₺/m 2;- ₺;-;-;-
-Beykoz;Acarlar;922 ₺/m 2;892.931 ₺;-;-;%31,43
-Beykoz;Merkez;466 ₺/m 2;- ₺;-;-;-
-Beykoz;Yalıköy;551 ₺/m 2;37.998 ₺;-;-;%93,82
-Beykoz;Ortaçeşme;377 ₺/m 2;38.870 ₺;-;-;%48,55
 Beykoz;Tokatköy;725 ₺/m 2;21.028 ₺;-;-;%335,97
-Beykoz;Çengeldere;234 ₺/m 2;106.970 ₺;11 yıl;%8,87;%-10,14
-Beykoz;Çiftlik;296 ₺/m 2;67.126 ₺;36 yıl;%2,76;%22,69
-Beykoz;Fatih;544 ₺/m 2;85.458 ₺;9 yıl;%10,90;%89,28
+Beykoz;Yalıköy;551 ₺/m 2;37.998 ₺;-;-;%93,82
 Beykoz;Yavuz Selim;167 ₺/m 2;17.021 ₺;-;-;%-31,98
-Beykoz;Riva;995 ₺/m 2;- ₺;-;-;-
-Beykoz;Elmalı;414 ₺/m 2;176.731 ₺;-;-;%422,65
-Beykoz;Örnekköy;403 ₺/m 2;98.227 ₺;-;-;%2,36
-Beykoz;Paşamandıra;247 ₺/m 2;61.575 ₺;-;-;%6,72
+Beykoz;Yeni Mahalle;462 ₺/m 2;13.404 ₺;-;-;%95,40
+Beykoz;Zerzavatçı;-;-;-;-;-
+Beylikdüzü;Adnan Kahveci;402 ₺/m 2;71.497 ₺;17 yıl;%5,95;%27,47
+Beylikdüzü;Barış;436 ₺/m 2;134.637 ₺;18 yıl;%5,55;%33,72
+Beylikdüzü;Büyükşehir;572 ₺/m 2;44.050 ₺;17 yıl;%5,79;%78,88
+Beylikdüzü;Cumhuriyet;420 ₺/m 2;51.226 ₺;18 yıl;%5,41;%42,70
+Beylikdüzü;Dereağzı;292 ₺/m 2;30.626 ₺;18 yıl;%5,52;%37,94
+Beylikdüzü;Gürpınar;283 ₺/m 2;29.468 ₺;22 yıl;%4,60;%16,62
+Beylikdüzü;Kavaklı;392 ₺/m 2;56.462 ₺;16 yıl;%6,33;%60,92
+Beylikdüzü;Marmara;479 ₺/m 2;73.792 ₺;12 yıl;%8,29;%61,84
+Beylikdüzü;Sahil;322 ₺/m 2;56.962 ₺;-;-;%33,77
+Beylikdüzü;Yakuplu;310 ₺/m 2;71.670 ₺;17 yıl;%5,88;%25,50
+Beyoğlu;Arap Cami;748 ₺/m 2;38.137 ₺;-;-;%6,57
+Beyoğlu;Asmalı Mescit;543 ₺/m 2;67.827 ₺;22 yıl;%4,65;%-23,62
+Beyoğlu;Bedrettin;-;-;-;-;-
+Beyoğlu;Bereketzade;608 ₺/m 2;49.853 ₺;17 yıl;%5,92;%10,03
+Beyoğlu;Bostan;811 ₺/m 2;54.351 ₺;-;-;%92,18
+Beyoğlu;Bülbül;580 ₺/m 2;29.586 ₺;8 yıl;%12,23;%82,92
+Beyoğlu;Camiikebir;596 ₺/m 2;37.554 ₺;-;-;%124,78
+Beyoğlu;Cihangir;479 ₺/m 2;43.146 ₺;27 yıl;%3,72;%-24,34
+Beyoğlu;Çatma Mescit;489 ₺/m 2;32.738 ₺;15 yıl;%6,54;%33,84
+Beyoğlu;Çukur;665 ₺/m 2;116.294 ₺;-;-;%39,64
+Beyoğlu;Emekyemez;691 ₺/m 2;79.459 ₺;12 yıl;%8,06;%20,76
+Beyoğlu;Evliya Çelebi;724 ₺/m 2;90.438 ₺;25 yıl;%4,04;%29,18
+Beyoğlu;Fetihtepe;253 ₺/m 2;- ₺;-;-;-
+Beyoğlu;Firuzağa;852 ₺/m 2;51.990 ₺;-;-;%61,88
+Beyoğlu;Gümüşsuyu;667 ₺/m 2;142.002 ₺;15 yıl;%6,64;%35,25
+Beyoğlu;Hacıahmet;438 ₺/m 2;75.396 ₺;6 yıl;%18,07;%6,90
+Beyoğlu;Hacımimi;467 ₺/m 2;80.780 ₺;29 yıl;%3,51;%-4,42
+Beyoğlu;Halıcıoğlu;203 ₺/m 2;29.972 ₺;21 yıl;%4,65;%-27,71
+Beyoğlu;Hüseyinağa;647 ₺/m 2;56.285 ₺;18 yıl;%5,63;%8,07
+Beyoğlu;İstiklal;791 ₺/m 2;- ₺;-;-;-
+Beyoğlu;Kadımehmet Efendi;323 ₺/m 2;37.772 ₺;-;-;%24,00
+Beyoğlu;KalyoncuKulluk;272 ₺/m 2;- ₺;-;-;-
+Beyoğlu;Kamerhatun;483 ₺/m 2;26.074 ₺;10 yıl;%10,09;%40,34
+Beyoğlu;Kaptanpaşa;131 ₺/m 2;- ₺;-;-;-
+Beyoğlu;Katipmustafa Çelebi;621 ₺/m 2;71.463 ₺;19 yıl;%5,17;%-9,73
+Beyoğlu;Keçecipiri;250 ₺/m 2;32.233 ₺;11 yıl;%9,09;%15,59
+Beyoğlu;Kemankeş Karamustafapaşa;821 ₺/m 2;88.629 ₺;15 yıl;%6,83;%27,33
+Beyoğlu;Kılıçali Paşa;792 ₺/m 2;62.597 ₺;16 yıl;%6,41;%19,98
+Beyoğlu;Kocatepe;401 ₺/m 2;52.499 ₺;24 yıl;%4,20;%14,92
+Beyoğlu;Kulaksız;384 ₺/m 2;4.607 ₺;14 yıl;%6,96;%102,67
+Beyoğlu;Kuloğlu;685 ₺/m 2;74.665 ₺;20 yıl;%4,89;%24,92
+Beyoğlu;Küçük Piyale;312 ₺/m 2;38.094 ₺;20 yıl;%5,11;%40,21
+Beyoğlu;Müeyyetzade;856 ₺/m 2;50.505 ₺;10 yıl;%10,00;%25,32
+Beyoğlu;Ömer Avni;543 ₺/m 2;57.565 ₺;22 yıl;%4,57;%-23,77
+Beyoğlu;Örnektepe;193 ₺/m 2;25.433 ₺;-;-;%-30,77
+Beyoğlu;Piri Mehmet Paşa;549 ₺/m 2;78.495 ₺;16 yıl;%6,17;%139,88
+Beyoğlu;Piyalepaşa;206 ₺/m 2;18.766 ₺;-;-;%10,87
+Beyoğlu;Pürtelaş Hasan Efendi;660 ₺/m 2;63.357 ₺;18 yıl;%5,55;%17,66
+Beyoğlu;Sururi;456 ₺/m 2;31.898 ₺;-;%10,73;%51,04
+Beyoğlu;Sütlüce;343 ₺/m 2;26.791 ₺;19 yıl;%5,24;%3,82
+Beyoğlu;Şahkulu;900 ₺/m 2;71.103 ₺;15 yıl;%6,60;%51,35
+Beyoğlu;Şehit Muhtar;902 ₺/m 2;91.108 ₺;13 yıl;%7,72;%102,77
+Beyoğlu;Tomtom;588 ₺/m 2;45.902 ₺;17 yıl;%5,89;%9,97
+Beyoğlu;Yahya Kahya;359 ₺/m 2;- ₺;-;-;-
+Beyoğlu;Yenişehir;294 ₺/m 2;- ₺;-;-;-
+Büyükçekmece;19 Mayıs;385 ₺/m 2;38.452 ₺;16 yıl;%6,19;%16,12
+Büyükçekmece;Ahmediye;-;-;-;-;-
+Büyükçekmece;Alkent 2000;784 ₺/m 2;- ₺;-;-;-
+Büyükçekmece;Atatürk;545 ₺/m 2;60.485 ₺;9 yıl;%10,67;%48,81
+Büyükçekmece;Bahçelievler;299 ₺/m 2;45.999 ₺;20 yıl;%4,90;%26,24
+Büyükçekmece;Celaliye;312 ₺/m 2;- ₺;-;-;-
+Büyükçekmece;Cumhuriyet;455 ₺/m 2;59.603 ₺;13 yıl;%7,80;%11,63
+Büyükçekmece;Çakmaklı;357 ₺/m 2;129.620 ₺;30 yıl;%3,35;%30,01
+Büyükçekmece;Dizdariye;313 ₺/m 2;22.549 ₺;16 yıl;%6,30;%12,78
+Büyükçekmece;Ekinoba;457 ₺/m 2;47.075 ₺;13 yıl;%7,54;%34,78
+Büyükçekmece;Fatih;565 ₺/m 2;67.830 ₺;11 yıl;%9,14;%63,85
+Büyükçekmece;Güzelce;438 ₺/m 2;- ₺;-;-;-
+Büyükçekmece;Hürriyet;257 ₺/m 2;67.488 ₺;21 yıl;%4,81;%43,92
+Büyükçekmece;Kamiloba;180 ₺/m 2;64.012 ₺;-;-;%-6,92
+Büyükçekmece;Karaağaç;367 ₺/m 2;93.926 ₺;-;-;%-4,21
+Büyükçekmece;Kumburgaz;298 ₺/m 2;63.578 ₺;19 yıl;%5,17;%98,60
+Büyükçekmece;Mimaroba;494 ₺/m 2;39.974 ₺;16 yıl;%6,08;%41,76
+Büyükçekmece;Mimarsinan;548 ₺/m 2;109.658 ₺;-;-;%122,82
+Büyükçekmece;Murat Çeşme;398 ₺/m 2;- ₺;-;-;-
+Büyükçekmece;Pınartepe;346 ₺/m 2;45.988 ₺;16 yıl;%6,36;%39,23
+Büyükçekmece;Sinanoba;661 ₺/m 2;33.706 ₺;9 yıl;%10,57;%130,37
+Büyükçekmece;Türkoba;247 ₺/m 2;116.782 ₺;-;-;%36,40
+Büyükçekmece;Ulus;232 ₺/m 2;29.946 ₺;27 yıl;%3,73;%-10,83
+Büyükçekmece;Yenimahalle;246 ₺/m 2;- ₺;-;-;-
+Çatalca;Akalan;-;-;-;-;-
+Çatalca;Atatürk;-;-;-;-;-
+Çatalca;Aydınlar;-;-;-;-;-
+Çatalca;Bahşayiş;-;-;-;-;-
+Çatalca;Başak;-;-;-;-;-
+Çatalca;Belgrat;-;-;-;-;-
+Çatalca;Celepköy;-;-;-;-;-
+Çatalca;Çakıl;265 ₺/m 2;- ₺;-;-;-
+Çatalca;Çanakça;73 ₺/m 2;14.626 ₺;-;-;%-59,26
+Çatalca;Çiftlikköy;-;-;-;-;-
+Çatalca;Dağyenice;-;-;-;-;-
+Çatalca;Elbasan;-;-;-;-;-
+Çatalca;Fatih;-;-;-;-;-
+Çatalca;Ferhatpaşa;293 ₺/m 2;25.511 ₺;14 yıl;%7,34;%35,47
+Çatalca;Gökçeali;242 ₺/m 2;22.980 ₺;-;-;%10,79
+Çatalca;Gümüşpınar;-;-;-;-;-
+Çatalca;Hallaçlı;-;-;-;-;-
+Çatalca;Hisarbeyli;-;-;-;-;-
+Çatalca;İhsaniye;-;-;-;-;-
+Çatalca;İnceğiz;-;-;-;-;-
+Çatalca;İzzettin;129 ₺/m 2;41.913 ₺;51 yıl;%1,94;%-63,71
+Çatalca;Kabakça;-;-;-;-;-
+Çatalca;Kaleiçi;311 ₺/m 2;35.168 ₺;15 yıl;%6,69;%63,80
+Çatalca;Kalfa;-;-;-;-;-
+Çatalca;Karacaköy Merkez;-;-;-;-;-
+Çatalca;Karamandere;-;-;-;-;-
+Çatalca;Kestanelik;-;-;-;-;-
+Çatalca;Kızılcaali;-;-;-;-;-
+Çatalca;Muratbey Merkez;-;-;-;-;-
+Çatalca;Nakkaş;-;-;-;-;-
+Çatalca;Oklalı;-;-;-;-;-
+Çatalca;Ormanlı;-;-;-;-;-
+Çatalca;Ovayenice;298 ₺/m 2;29.248 ₺;-;-;%129,33
+Çatalca;Örcünlü;-;-;-;-;-
+Çatalca;Örencik;-;-;-;-;-
+Çatalca;Subaşı;-;-;-;-;-
+Çatalca;Yalıköy;-;-;-;-;-
+Çatalca;Yaylacık;-;-;-;-;-
+Çatalca;Yazlık;-;-;-;-;-
+Çekmeköy;Alemdağ;397 ₺/m 2;137.873 ₺;16 yıl;%6,19;%72,24
+Çekmeköy;Aydınlar;324 ₺/m 2;56.756 ₺;12 yıl;%8,14;%60,74
+Çekmeköy;Cumhuriyet;355 ₺/m 2;35.544 ₺;20 yıl;%4,99;%41,73
+Çekmeköy;Çamlık;370 ₺/m 2;49.244 ₺;12 yıl;%8,67;%18,14
+Çekmeköy;Çatalmeşe;332 ₺/m 2;47.121 ₺;11 yıl;%8,90;%55,15
+Çekmeköy;Ekşioğlu;324 ₺/m 2;- ₺;-;-;-
+Çekmeköy;Güngören;508 ₺/m 2;39.082 ₺;14 yıl;%7,28;%48,48
+Çekmeköy;Hamidiye;289 ₺/m 2;30.628 ₺;15 yıl;%6,46;%6,98
+Çekmeköy;Hüseyinli;377 ₺/m 2;- ₺;-;-;-
+Çekmeköy;Kirazlıdere;536 ₺/m 2;142.618 ₺;9 yıl;%11,04;%109,81
+Çekmeköy;Koçullu;583 ₺/m 2;2.740.860 ₺;-;-;%167,41
+Çekmeköy;Mehmet Akif;397 ₺/m 2;45.289 ₺;15 yıl;%6,66;%50,60
+Çekmeköy;Merkez;429 ₺/m 2;50.613 ₺;13 yıl;%7,85;%42,54
+Çekmeköy;Mimar Sinan;436 ₺/m 2;47.126 ₺;13 yıl;%7,44;%60,85
+Çekmeköy;Nişantepe;393 ₺/m 2;41.258 ₺;16 yıl;%6,10;%21,37
+Çekmeköy;Ömerli;745 ₺/m 2;178.852 ₺;19 yıl;%5,32;%9,13
+Çekmeköy;Reşadiye;337 ₺/m 2;117.046 ₺;31 yıl;%3,22;%6,00
+Çekmeköy;Sırapınar;226 ₺/m 2;- ₺;-;-;-
+Çekmeköy;Soğukpınar;280 ₺/m 2;85.375 ₺;13 yıl;%7,96;%20,93
+Çekmeköy;Sultançiftliği;438 ₺/m 2;49.974 ₺;15 yıl;%6,57;%69,89
+Çekmeköy;Taşdelen;538 ₺/m 2;62.993 ₺;10 yıl;%9,97;%88,43
+Esenler;15 Temmuz;480 ₺/m 2;- ₺;-;-;-
+Esenler;Atışalanı;190 ₺/m 2;32.705 ₺;-;-;%3,58
+Esenler;Birlik;209 ₺/m 2;29.531 ₺;19 yıl;%5,35;%12,74
+Esenler;Çifte Havuzlar;-;-;-;-;-
+Esenler;Davutpaşa;277 ₺/m 2;30.496 ₺;12 yıl;%8,29;%19,31
+Esenler;Fatih;208 ₺/m 2;24.924 ₺;17 yıl;%5,95;%36,83
+Esenler;Fevzi Çakmak;229 ₺/m 2;31.349 ₺;13 yıl;%7,66;%17,97
+Esenler;Kazım Karabekir;226 ₺/m 2;26.633 ₺;15 yıl;%6,57;%30,83
+Esenler;Kemer;259 ₺/m 2;37.251 ₺;14 yıl;%7,07;%42,74
+Esenler;Menderes;272 ₺/m 2;40.007 ₺;11 yıl;%8,89;%48,66
+Esenler;Mimar Sinan;246 ₺/m 2;30.304 ₺;12 yıl;%8,60;%13,83
+Esenler;Namık Kemal;195 ₺/m 2;26.905 ₺;20 yıl;%5,08;%-14,54
+Esenler;Nine Hatun;268 ₺/m 2;30.505 ₺;13 yıl;%7,84;%41,93
+Esenler;Oruçreis;304 ₺/m 2;41.061 ₺;16 yıl;%6,18;%33,00
+Esenler;Şehitler;-;-;-;-;-
+Esenler;Tuna;205 ₺/m 2;- ₺;-;-;-
+Esenler;Turgut Reis;194 ₺/m 2;21.540 ₺;22 yıl;%4,63;%-3,58
+Esenler;Yavuz Selim;255 ₺/m 2;29.119 ₺;10 yıl;%9,57;%10,80
+Esenler;Yeşil Vadi;-;-;-;-;-
+Esenyurt;Akçaburgaz;279 ₺/m 2;298.497 ₺;22 yıl;%4,65;%14,35
+Esenyurt;Akevler;251 ₺/m 2;- ₺;-;-;-
+Esenyurt;Akşemseddin;218 ₺/m 2;65.331 ₺;28 yıl;%3,52;%-0,45
+Esenyurt;Ardıçlı;294 ₺/m 2;- ₺;-;-;-
+Esenyurt;Aşık Veysel;375 ₺/m 2;32.960 ₺;19 yıl;%5,13;%1,38
+Esenyurt;Atatürk;218 ₺/m 2;69.846 ₺;15 yıl;%6,85;%-25,01
+Esenyurt;Balıkyolu;206 ₺/m 2;26.391 ₺;13 yıl;%7,80;%53,03
+Esenyurt;Barbaros Hayrettin Paşa;346 ₺/m 2;45.319 ₺;19 yıl;%5,40;%17,18
+Esenyurt;Battalgazi;148 ₺/m 2;33.165 ₺;14 yıl;%7,30;%-12,46
+Esenyurt;Cumhuriyet;342 ₺/m 2;34.554 ₺;15 yıl;%6,85;%28,73
+Esenyurt;Çınar;184 ₺/m 2;31.696 ₺;21 yıl;%4,81;%6,05
+Esenyurt;Esenkent;383 ₺/m 2;64.784 ₺;10 yıl;%9,67;%75,21
+Esenyurt;Fatih;240 ₺/m 2;23.292 ₺;11 yıl;%8,78;%61,03
+Esenyurt;Gökevler;415 ₺/m 2;51.871 ₺;16 yıl;%6,29;%24,15
+Esenyurt;Güzelyurt;333 ₺/m 2;51.604 ₺;12 yıl;%8,61;%60,63
+Esenyurt;Hürriyet;184 ₺/m 2;74.461 ₺;16 yıl;%6,31;%42,85
+Esenyurt;İncirtepe;221 ₺/m 2;31.973 ₺;15 yıl;%6,77;%43,22
+Esenyurt;İnönü;220 ₺/m 2;27.045 ₺;14 yıl;%7,08;%19,01
+Esenyurt;İstiklal;180 ₺/m 2;35.861 ₺;16 yıl;%6,33;%24,36
+Esenyurt;Koza;416 ₺/m 2;88.991 ₺;18 yıl;%5,63;%36,25
+Esenyurt;Mehmet Akif Ersoy;364 ₺/m 2;- ₺;-;-;-
+Esenyurt;Mehterçeşme;285 ₺/m 2;26.823 ₺;13 yıl;%7,87;%46,73
+Esenyurt;Merkez;246 ₺/m 2;33.935 ₺;15 yıl;%6,84;%31,26
+Esenyurt;Mevlana;348 ₺/m 2;48.302 ₺;12 yıl;%8,40;%78,25
+Esenyurt;Namık Kemal;252 ₺/m 2;132.656 ₺;18 yıl;%5,48;%4,31
+Esenyurt;Necip Fazıl Kısakürek;209 ₺/m 2;- ₺;-;-;-
+Esenyurt;Orhan Gazi;314 ₺/m 2;82.545 ₺;16 yıl;%6,06;%14,73
+Esenyurt;Osmangazi;227 ₺/m 2;519.539 ₺;12 yıl;%8,56;%11,42
+Esenyurt;Örnek;211 ₺/m 2;72.083 ₺;18 yıl;%5,67;%3,72
+Esenyurt;Pınar;165 ₺/m 2;30.489 ₺;18 yıl;%5,63;%7,21
+Esenyurt;Piri Reis;295 ₺/m 2;55.671 ₺;14 yıl;%6,95;%36,31
+Esenyurt;Saadetdere;243 ₺/m 2;- ₺;-;-;-
+Esenyurt;Selahaddin Eyyubi;294 ₺/m 2;225.047 ₺;13 yıl;%7,66;%5,20
+Esenyurt;Sultaniye;240 ₺/m 2;32.574 ₺;14 yıl;%7,23;%43,58
+Esenyurt;Süleymaniye;272 ₺/m 2;31.881 ₺;11 yıl;%9,11;%81,59
+Esenyurt;Şehitler;218 ₺/m 2;109.659 ₺;19 yıl;%5,28;%53,11
+Esenyurt;Talatpaşa;332 ₺/m 2;42.791 ₺;11 yıl;%9,15;%81,95
+Esenyurt;Turgut Özal;329 ₺/m 2;69.391 ₺;15 yıl;%6,84;%30,08
+Esenyurt;Üçevler;263 ₺/m 2;20.510 ₺;-;-;%33,84
+Esenyurt;Yenikent;239 ₺/m 2;28.003 ₺;20 yıl;%5,03;%40,56
+Esenyurt;Yeşilkent;242 ₺/m 2;52.910 ₺;17 yıl;%5,92;%4,91
+Esenyurt;Yunus Emre;248 ₺/m 2;4.461 ₺;15 yıl;%6,69;%68,60
+Esenyurt;Zafer;294 ₺/m 2;32.586 ₺;12 yıl;%8,14;%30,76
+Eyüpsultan;5. Levent;630 ₺/m 2;81.273 ₺;17 yıl;%5,91;%18,38
+Eyüpsultan;Ağaçlı;-;-;-;-;-
+Eyüpsultan;Akpınar;-;-;-;-;-
+Eyüpsultan;Akşemsettin;351 ₺/m 2;32.629 ₺;23 yıl;%4,31;%33,78
+Eyüpsultan;Alibeyköy;326 ₺/m 2;33.261 ₺;17 yıl;%5,74;%-4,95
+Eyüpsultan;Çiftalan;-;-;-;-;-
+Eyüpsultan;Çırçır;354 ₺/m 2;46.721 ₺;15 yıl;%6,69;%22,83
+Eyüpsultan;Defterdar;536 ₺/m 2;131.873 ₺;8 yıl;%12,61;%4,17
+Eyüpsultan;Düğmeciler;435 ₺/m 2;43.529 ₺;-;-;%97,41
+Eyüpsultan;Emniyettepe;260 ₺/m 2;12.746 ₺;-;-;%-39,74
+Eyüpsultan;Esentepe;456 ₺/m 2;58.375 ₺;11 yıl;%9,43;%52,84
+Eyüpsultan;Eyüp Merkez;277 ₺/m 2;- ₺;-;-;-
+Eyüpsultan;Göktürk Merkez;874 ₺/m 2;133.712 ₺;13 yıl;%7,53;%37,81
+Eyüpsultan;Güzeltepe;295 ₺/m 2;27.102 ₺;22 yıl;%4,60;%27,74
+Eyüpsultan;İhsaniye;-;-;-;-;-
+Eyüpsultan;İslambey;705 ₺/m 2;136.030 ₺;-;-;%236,25
+Eyüpsultan;Işıklar;-;-;-;-;-
+Eyüpsultan;Karadolap;344 ₺/m 2;35.114 ₺;19 yıl;%5,34;%11,51
+Eyüpsultan;Mimar Sinan;274 ₺/m 2;826.278 ₺;24 yıl;%4,08;%-31,58
+Eyüpsultan;Mithatpaşa;638 ₺/m 2;28.730 ₺;17 yıl;%5,89;%7,24
+Eyüpsultan;Nişanca;357 ₺/m 2;- ₺;-;-;-
+Eyüpsultan;Odayeri;-;-;-;-;-
+Eyüpsultan;Pirinççi;-;-;-;-;-
+Eyüpsultan;Rami Cuma;278 ₺/m 2;30.009 ₺;34 yıl;%2,90;%14,67
+Eyüpsultan;Rami Yeni;283 ₺/m 2;94.724 ₺;17 yıl;%6,03;%33,08
+Eyüpsultan;Sakarya;405 ₺/m 2;- ₺;-;-;-
+Eyüpsultan;Silahtarağa;264 ₺/m 2;47.527 ₺;19 yıl;%5,16;%-11,62
+Eyüpsultan;Topçular;429 ₺/m 2;53.145 ₺;13 yıl;%7,51;%44,75
+Eyüpsultan;Yeşilpınar;330 ₺/m 2;49.438 ₺;15 yıl;%6,88;%52,80
+Fatih;Aksaray;447 ₺/m 2;43.393 ₺;16 yıl;%6,30;%44,34
+Fatih;Akşemsettin;528 ₺/m 2;50.706 ₺;14 yıl;%7,08;%60,09
+Fatih;Alemdar;950 ₺/m 2;84.562 ₺;-;-;%35,28
+Fatih;Ali Kuşçu;523 ₺/m 2;41.806 ₺;14 yıl;%7,09;%48,96
+Fatih;Atikali;439 ₺/m 2;46.107 ₺;-;-;%6,61
+Fatih;Ayvansaray;524 ₺/m 2;22.009 ₺;-;-;%12,50
+Fatih;Balabanağa;467 ₺/m 2;126.597 ₺;27 yıl;%3,73;%-14,18
+Fatih;Balat;696 ₺/m 2;58.436 ₺;12 yıl;%8,47;%55,68
+Fatih;Beyazıt;1.062 ₺/m 2;503.193 ₺;14 yıl;%7,28;%106,38
+Fatih;Binbirdirek;581 ₺/m 2;83.065 ₺;27 yıl;%3,65;%46,74
+Fatih;Cankurtaran;-;-;-;-;-
+Fatih;Cerrahpaşa;361 ₺/m 2;50.896 ₺;9 yıl;%11,69;%7,46
+Fatih;Cibali;310 ₺/m 2;22.966 ₺;13 yıl;%7,46;%31,19
+Fatih;Demirtaş;-;-;-;-;-
+Fatih;Derviş Ali;370 ₺/m 2;22.914 ₺;16 yıl;%6,40;%31,49
+Fatih;Emin Sinan;751 ₺/m 2;- ₺;-;-;-
+Fatih;Hacı Kadın;520 ₺/m 2;43.643 ₺;12 yıl;%8,59;%40,66
+Fatih;Haseki Sultan;456 ₺/m 2;45.614 ₺;10 yıl;%9,81;%47,93
+Fatih;Hırka-İ Şerif;439 ₺/m 2;41.229 ₺;12 yıl;%8,47;%42,88
+Fatih;Hobyar;858 ₺/m 2;37.755 ₺;12 yıl;%8,46;%8,03
+Fatih;Hoca Gıyasettin;-;-;-;-;-
+Fatih;Hocapaşa;895 ₺/m 2;- ₺;-;-;-
+Fatih;İskenderpaşa;501 ₺/m 2;42.073 ₺;14 yıl;%7,07;%46,83
+Fatih;Kalenderhane;-;-;-;-;-
+Fatih;Karagümrük;372 ₺/m 2;34.230 ₺;13 yıl;%7,86;%43,47
+Fatih;Katip Kasım;585 ₺/m 2;52.639 ₺;17 yıl;%5,77;%10,09
+Fatih;Kemalpaşa;541 ₺/m 2;- ₺;-;-;-
+Fatih;Koca Mustafapaşa;314 ₺/m 2;23.235 ₺;17 yıl;%5,75;%4,89
+Fatih;Küçük Ayasofya;-;-;-;-;-
+Fatih;Mercan;659 ₺/m 2;- ₺;-;-;-
+Fatih;Mesihpaşa;603 ₺/m 2;54.230 ₺;16 yıl;%6,27;%13,01
+Fatih;Mevlanakapı;391 ₺/m 2;- ₺;-;-;-
+Fatih;Mimar Hayrettin;899 ₺/m 2;89.037 ₺;11 yıl;%9,34;%51,59
+Fatih;Mimar Kemalettin;803 ₺/m 2;44.176 ₺;12 yıl;%8,26;%42,12
+Fatih;Molla Fenari;971 ₺/m 2;110.738 ₺;-;-;%95,69
+Fatih;Molla Gürani;421 ₺/m 2;43.399 ₺;19 yıl;%5,32;%15,27
+Fatih;Molla Hüsrev;367 ₺/m 2;28.658 ₺;28 yıl;%3,60;%-3,57
+Fatih;Muhsine Hatun;759 ₺/m 2;56.157 ₺;13 yıl;%7,51;%30,36
+Fatih;Nişanca;646 ₺/m 2;60.755 ₺;17 yıl;%6,05;%99,92
+Fatih;Rüstempaşa;-;-;-;-;-
+Fatih;Saraç İshak;784 ₺/m 2;61.899 ₺;11 yıl;%8,77;%151,31
+Fatih;Sarıdemir;1.290 ₺/m 2;21.932 ₺;4 yıl;%25,55;%217,07
+Fatih;Seyyid Ömer;471 ₺/m 2;35.813 ₺;11 yıl;%8,71;%50,30
+Fatih;Silivrikapı;555 ₺/m 2;33.312 ₺;8 yıl;%12,64;%78,36
+Fatih;Sultan Ahmet;1.328 ₺/m 2;- ₺;-;-;-
+Fatih;Sururi;867 ₺/m 2;54.607 ₺;7 yıl;%14,42;%180,19
+Fatih;Süleymaniye;757 ₺/m 2;54.534 ₺;15 yıl;%6,50;%35,74
+Fatih;Sümbül Efendi;374 ₺/m 2;77.825 ₺;-;-;%13,85
+Fatih;Şehremini;466 ₺/m 2;57.306 ₺;17 yıl;%5,99;%36,32
+Fatih;Şehsuvar Bey;278 ₺/m 2;20.831 ₺;22 yıl;%4,50;%23,76
+Fatih;Tahtakale;-;-;-;-;-
+Fatih;Taya Hatun;897 ₺/m 2;67.285 ₺;14 yıl;%7,01;%22,53
+Fatih;Topkapı;390 ₺/m 2;46.061 ₺;12 yıl;%8,16;%3,49
+Fatih;Yavuz Sinan;-;-;-;-;-
+Fatih;Yavuz Sultan Selim;465 ₺/m 2;12.080 ₺;-;-;%102,09
+Fatih;Yedikule;387 ₺/m 2;17.801 ₺;12 yıl;%8,54;%39,57
+Fatih;Zeyrek;361 ₺/m 2;26.719 ₺;11 yıl;%8,70;%43,50
+Gaziosmanpaşa;Bağlarbaşı;354 ₺/m 2;40.302 ₺;23 yıl;%4,30;%37,36
+Gaziosmanpaşa;Barbaros Hayrettin Paşa;267 ₺/m 2;28.082 ₺;17 yıl;%6,02;%28,76
+Gaziosmanpaşa;Fevzi Çakmak;394 ₺/m 2;29.578 ₺;10 yıl;%9,91;%45,50
+Gaziosmanpaşa;Hürriyet;391 ₺/m 2;37.896 ₺;12 yıl;%8,61;%69,15
+Gaziosmanpaşa;Karadeniz;256 ₺/m 2;26.073 ₺;13 yıl;%7,79;%7,19
+Gaziosmanpaşa;Karayolları;248 ₺/m 2;36.222 ₺;-;-;%54,12
+Gaziosmanpaşa;Karlıtepe;316 ₺/m 2;41.684 ₺;28 yıl;%3,63;%14,35
+Gaziosmanpaşa;Kazım Karabekir;219 ₺/m 2;28.737 ₺;-;-;%-7,91
+Gaziosmanpaşa;Merkez;316 ₺/m 2;26.257 ₺;13 yıl;%7,56;%32,49
+Gaziosmanpaşa;Mevlana;364 ₺/m 2;71.998 ₺;-;-;%36,96
+Gaziosmanpaşa;Pazariçi;265 ₺/m 2;49.299 ₺;13 yıl;%7,63;%50,08
+Gaziosmanpaşa;Sarıgöl;426 ₺/m 2;25.570 ₺;11 yıl;%8,81;%44,05
+Gaziosmanpaşa;Şemsipaşa;346 ₺/m 2;22.507 ₺;24 yıl;%4,19;%59,27
+Gaziosmanpaşa;Yeni Mahalle;279 ₺/m 2;41.609 ₺;12 yıl;%8,16;%41,53
+Gaziosmanpaşa;Yenidoğan;392 ₺/m 2;41.596 ₺;-;%10,72;%40,47
+Gaziosmanpaşa;Yıldıztabya;264 ₺/m 2;15.867 ₺;17 yıl;%5,92;%-12,25
+Güngören;Abdurrahman Nafiz Gürman;655 ₺/m 2;62.191 ₺;16 yıl;%6,06;%51,48
+Güngören;Akıncılar;331 ₺/m 2;43.653 ₺;11 yıl;%8,81;%32,67
+Güngören;Gençosman;245 ₺/m 2;41.660 ₺;13 yıl;%7,56;%21,29
+Güngören;Güneştepe;261 ₺/m 2;36.316 ₺;10 yıl;%9,99;%23,35
+Güngören;Güven;498 ₺/m 2;74.157 ₺;15 yıl;%6,52;%85,43
+Güngören;Haznedar;444 ₺/m 2;39.970 ₺;14 yıl;%7,34;%67,61
+Güngören;Mareşal Çakmak;232 ₺/m 2;30.887 ₺;18 yıl;%5,71;%11,25
+Güngören;Mehmet Nesih Özmen;382 ₺/m 2;132.338 ₺;27 yıl;%3,72;%4,86
+Güngören;Merkez;463 ₺/m 2;35.613 ₺;17 yıl;%5,88;%18,77
+Güngören;Sanayi;301 ₺/m 2;51.110 ₺;17 yıl;%5,72;%16,29
+Güngören;Tozkoparan;1.236 ₺/m 2;2.471 ₺;-;%11,82;%438,46
+Kadıköy;19 Mayıs;592 ₺/m 2;70.433 ₺;18 yıl;%5,60;%33,23
+Kadıköy;Acıbadem;696 ₺/m 2;60.531 ₺;12 yıl;%8,08;%28,77
+Kadıköy;Bostancı;802 ₺/m 2;90.583 ₺;14 yıl;%7,31;%25,25
+Kadıköy;Caddebostan;1.021 ₺/m 2;161.300 ₺;16 yıl;%6,41;%39,26
+Kadıköy;Caferağa;693 ₺/m 2;64.491 ₺;13 yıl;%7,44;%35,19
+Kadıköy;Dumlupınar;909 ₺/m 2;90.015 ₺;12 yıl;%8,02;%43,33
+Kadıköy;Eğitim;485 ₺/m 2;51.388 ₺;15 yıl;%6,86;%31,62
+Kadıköy;Erenköy;582 ₺/m 2;73.850 ₺;30 yıl;%3,35;%3,93
+Kadıköy;Fenerbahçe;1.009 ₺/m 2;121.063 ₺;14 yıl;%7,38;%30,92
+Kadıköy;Feneryolu;612 ₺/m 2;90.648 ₺;21 yıl;%4,86;%-3,68
+Kadıköy;Fikirtepe;892 ₺/m 2;111.503 ₺;14 yıl;%7,21;%51,36
+Kadıköy;Göztepe;866 ₺/m 2;125.506 ₺;18 yıl;%5,57;%29,64
+Kadıköy;Hasanpaşa;593 ₺/m 2;51.631 ₺;14 yıl;%7,24;%64,33
+Kadıköy;Koşuyolu;679 ₺/m 2;128.317 ₺;15 yıl;%6,79;%34,55
+Kadıköy;Kozyatağı;685 ₺/m 2;141.792 ₺;19 yıl;%5,38;%28,24
+Kadıköy;Merdivenköy;942 ₺/m 2;109.314 ₺;14 yıl;%7,18;%28,09
+Kadıköy;Osmanağa;644 ₺/m 2;57.290 ₺;14 yıl;%7,21;%37,97
+Kadıköy;Rasimpaşa;646 ₺/m 2;60.677 ₺;14 yıl;%7,36;%54,28
+Kadıköy;Sahrayıcedit;797 ₺/m 2;137.794 ₺;16 yıl;%6,34;%29,09
+Kadıköy;Suadiye;1.111 ₺/m 2;125.531 ₺;13 yıl;%7,69;%44,30
+Kadıköy;Zühtüpaşa;778 ₺/m 2;103.428 ₺;13 yıl;%7,50;%27,69
+Kağıthane;Çağlayan;300 ₺/m 2;53.664 ₺;18 yıl;%5,65;%26,45
+Kağıthane;Çeliktepe;275 ₺/m 2;27.767 ₺;24 yıl;%4,15;%2,08
+Kağıthane;Emniyet Evleri;369 ₺/m 2;37.626 ₺;14 yıl;%7,07;%0,25
+Kağıthane;Gültepe;397 ₺/m 2;24.208 ₺;14 yıl;%7,32;%49,64
+Kağıthane;Gürsel;395 ₺/m 2;50.967 ₺;20 yıl;%5,04;%-6,76
+Kağıthane;Hamidiye;501 ₺/m 2;139.739 ₺;22 yıl;%4,61;%18,63
+Kağıthane;Harmantepe;500 ₺/m 2;26.521 ₺;12 yıl;%8,45;%121,76
+Kağıthane;Hürriyet;320 ₺/m 2;36.765 ₺;16 yıl;%6,21;%46,80
+Kağıthane;Mehmet Akif Ersoy;258 ₺/m 2;40.707 ₺;-;-;%28,98
+Kağıthane;Merkez;500 ₺/m 2;49.457 ₺;14 yıl;%7,14;%21,12
+Kağıthane;Nurtepe;291 ₺/m 2;44.840 ₺;15 yıl;%6,80;%3,76
+Kağıthane;Ortabayır;439 ₺/m 2;50.508 ₺;-;%11,19;%55,80
+Kağıthane;Seyrantepe;304 ₺/m 2;69.689 ₺;18 yıl;%5,60;%31,54
+Kağıthane;Sultan Selim;287 ₺/m 2;30.082 ₺;24 yıl;%4,10;%17,68
+Kağıthane;Şirintepe;253 ₺/m 2;30.615 ₺;17 yıl;%5,97;%32,68
+Kağıthane;Talatpaşa;291 ₺/m 2;35.237 ₺;17 yıl;%6,04;%18,45
+Kağıthane;Telsizler;470 ₺/m 2;30.570 ₺;-;%14,27;%111,34
+Kağıthane;Yahya Kemal;295 ₺/m 2;34.173 ₺;20 yıl;%4,98;%-29,48
+Kağıthane;Yeşilce;304 ₺/m 2;49.490 ₺;16 yıl;%6,38;%23,13
+Kartal;Atalar;563 ₺/m 2;75.385 ₺;-;%11,17;%67,66
+Kartal;Cevizli;587 ₺/m 2;44.644 ₺;13 yıl;%7,63;%43,78
+Kartal;Cumhuriyet;325 ₺/m 2;78.322 ₺;20 yıl;%5,05;%33,25
+Kartal;Çavuşoğlu;367 ₺/m 2;74.174 ₺;26 yıl;%3,90;%24,08
+Kartal;Esentepe;458 ₺/m 2;44.886 ₺;17 yıl;%5,86;%23,33
+Kartal;Gümüşpınar;453 ₺/m 2;45.270 ₺;-;-;%82,72
+Kartal;Hürriyet;388 ₺/m 2;49.246 ₺;15 yıl;%6,67;%82,44
+Kartal;Karlıktepe;466 ₺/m 2;81.023 ₺;13 yıl;%7,41;%41,90
+Kartal;Kordonboyu;562 ₺/m 2;49.464 ₺;17 yıl;%5,86;%38,87
+Kartal;Orhantepe;593 ₺/m 2;40.345 ₺;16 yıl;%6,45;%40,30
+Kartal;Orta;502 ₺/m 2;72.797 ₺;16 yıl;%6,40;%40,05
+Kartal;Petrol İş;581 ₺/m 2;69.168 ₺;14 yıl;%7,13;%76,82
+Kartal;Soğanlık Yeni;524 ₺/m 2;64.465 ₺;16 yıl;%6,21;%46,17
+Kartal;Topselvi;590 ₺/m 2;84.968 ₺;-;%11,79;%100,42
+Kartal;Uğur Mumcu;524 ₺/m 2;97.989 ₺;13 yıl;%7,83;%56,40
+Kartal;Yakacık Çarşı;461 ₺/m 2;46.563 ₺;10 yıl;%10,21;%34,93
+Kartal;Yakacık Yeni;331 ₺/m 2;70.155 ₺;33 yıl;%3,01;%13,56
+Kartal;Yalı;438 ₺/m 2;44.658 ₺;17 yıl;%5,76;%23,23
+Kartal;Yukarı;570 ₺/m 2;33.631 ₺;15 yıl;%6,69;%92,36
+Kartal;Yunus;402 ₺/m 2;110.224 ₺;15 yıl;%6,52;%93,29
+Küçükçekmece;Atakent;486 ₺/m 2;54.963 ₺;18 yıl;%5,56;%36,67
+Küçükçekmece;Atatürk;252 ₺/m 2;39.554 ₺;12 yıl;%8,01;%35,40
+Küçükçekmece;Beşyol;249 ₺/m 2;87.153 ₺;31 yıl;%3,25;%8,01
+Küçükçekmece;Cennet;442 ₺/m 2;32.715 ₺;16 yıl;%6,11;%56,55
+Küçükçekmece;Cumhuriyet;313 ₺/m 2;46.707 ₺;17 yıl;%5,78;%49,30
+Küçükçekmece;Fatih;642 ₺/m 2;46.224 ₺;13 yıl;%7,86;%88,32
+Küçükçekmece;Fevzi Çakmak;296 ₺/m 2;30.231 ₺;10 yıl;%10,12;%42,11
+Küçükçekmece;Gültepe;259 ₺/m 2;24.101 ₺;-;-;%21,59
+Küçükçekmece;Halkalı Merkez;309 ₺/m 2;61.407 ₺;19 yıl;%5,13;%16,19
+Küçükçekmece;İnönü;382 ₺/m 2;50.860 ₺;14 yıl;%6,97;%62,66
+Küçükçekmece;İstasyon;597 ₺/m 2;47.170 ₺;-;-;%79,79
+Küçükçekmece;Kanarya;275 ₺/m 2;34.153 ₺;14 yıl;%7,01;%66,72
+Küçükçekmece;Kartaltepe;366 ₺/m 2;35.532 ₺;21 yıl;%4,81;%6,55
+Küçükçekmece;Kemalpaşa;289 ₺/m 2;27.408 ₺;10 yıl;%9,69;%4,86
+Küçükçekmece;Mehmet Akif;251 ₺/m 2;35.840 ₺;15 yıl;%6,48;%42,03
+Küçükçekmece;Söğütlü Çeşme;283 ₺/m 2;57.829 ₺;18 yıl;%5,66;%45,14
+Küçükçekmece;Sultan Murat;290 ₺/m 2;42.560 ₺;21 yıl;%4,85;%34,16
+Küçükçekmece;Tevfikbey;327 ₺/m 2;46.381 ₺;17 yıl;%5,82;%49,43
+Küçükçekmece;Yarımburgaz;240 ₺/m 2;93.934 ₺;-;-;%45,55
+Küçükçekmece;Yeni Mahalle;277 ₺/m 2;29.619 ₺;-;-;%19,14
+Küçükçekmece;Yeşilova;363 ₺/m 2;34.497 ₺;14 yıl;%7,34;%51,78
+Maltepe;Altayçeşme;654 ₺/m 2;103.916 ₺;11 yıl;%9,32;%61,51
+Maltepe;Altıntepe;657 ₺/m 2;46.651 ₺;17 yıl;%5,81;%38,57
+Maltepe;Aydınevler;546 ₺/m 2;89.017 ₺;15 yıl;%6,45;%39,21
+Maltepe;Bağlarbaşı;508 ₺/m 2;47.276 ₺;14 yıl;%7,38;%27,92
+Maltepe;Başıbüyük;335 ₺/m 2;33.503 ₺;-;%27,48;%55,44
+Maltepe;Büyükbakkalköy;284 ₺/m 2;26.951 ₺;-;-;%27,38
+Maltepe;Cevizli;571 ₺/m 2;58.854 ₺;15 yıl;%6,68;%30,48
+Maltepe;Çınar;708 ₺/m 2;104.130 ₺;14 yıl;%7,05;%10,40
+Maltepe;Esenkent;398 ₺/m 2;60.535 ₺;16 yıl;%6,10;%14,01
+Maltepe;Feyzullah;601 ₺/m 2;58.264 ₺;14 yıl;%7,24;%40,92
+Maltepe;Fındıklı;391 ₺/m 2;54.751 ₺;15 yıl;%6,84;%50,55
+Maltepe;Girne;413 ₺/m 2;113.211 ₺;21 yıl;%4,83;%19,59
+Maltepe;Gülensu;247 ₺/m 2;23.947 ₺;10 yıl;%9,55;%53,85
+Maltepe;Gülsuyu;451 ₺/m 2;22.085 ₺;17 yıl;%5,92;%58,09
+Maltepe;İdealtepe;489 ₺/m 2;99.360 ₺;18 yıl;%5,52;%27,39
+Maltepe;Küçükyalı Merkez;660 ₺/m 2;47.512 ₺;15 yıl;%6,88;%45,17
+Maltepe;Yalı;535 ₺/m 2;66.813 ₺;10 yıl;%10,16;%30,05
+Maltepe;Zümrütevler;322 ₺/m 2;53.177 ₺;13 yıl;%7,42;%12,08
+Pendik;Ahmet Yesevi;308 ₺/m 2;31.757 ₺;15 yıl;%6,78;%12,65
+Pendik;Bahçelievler;496 ₺/m 2;97.247 ₺;17 yıl;%5,76;%35,92
+Pendik;Ballıca;-;-;-;-;-
+Pendik;Batı;483 ₺/m 2;36.198 ₺;17 yıl;%5,90;%22,16
+Pendik;Çamçeşme;328 ₺/m 2;59.088 ₺;9 yıl;%10,65;%48,34
+Pendik;Çamlık;539 ₺/m 2;- ₺;-;-;-
+Pendik;Çınardere;443 ₺/m 2;106.358 ₺;12 yıl;%8,11;%84,17
+Pendik;Doğu;502 ₺/m 2;58.288 ₺;9 yıl;%10,61;%16,27
+Pendik;Dumlupınar;339 ₺/m 2;28.775 ₺;21 yıl;%4,76;%58,78
+Pendik;Emirli;-;-;-;-;-
+Pendik;Ertuğrul Gazi;347 ₺/m 2;38.850 ₺;-;-;%75,54
+Pendik;Esenler;337 ₺/m 2;67.338 ₺;18 yıl;%5,57;%53,61
+Pendik;Esenyalı;348 ₺/m 2;36.911 ₺;13 yıl;%7,83;%22,04
+Pendik;Fatih;369 ₺/m 2;26.592 ₺;14 yıl;%7,20;%144,50
+Pendik;Fevzi Çakmak;367 ₺/m 2;45.825 ₺;15 yıl;%6,51;%35,80
+Pendik;Göçbeyli;-;-;-;-;-
+Pendik;Güllü Bağlar;329 ₺/m 2;84.840 ₺;18 yıl;%5,49;%44,23
+Pendik;Güzelyalı;301 ₺/m 2;67.473 ₺;9 yıl;%10,83;%23,67
+Pendik;Harmandere;646 ₺/m 2;334.410 ₺;-;-;%84,48
+Pendik;Kavakpınar;277 ₺/m 2;34.075 ₺;19 yıl;%5,35;%29,05
+Pendik;Kaynarca;325 ₺/m 2;38.359 ₺;19 yıl;%5,21;%25,67
+Pendik;Kurna;-;-;-;-;-
+Pendik;Kurtdoğmuş;-;-;-;-;-
+Pendik;Kurtköy;540 ₺/m 2;68.063 ₺;13 yıl;%7,41;%49,16
+Pendik;Orhangazi;343 ₺/m 2;23.324 ₺;14 yıl;%6,92;%83,24
+Pendik;Orta;250 ₺/m 2;53.557 ₺;22 yıl;%4,52;%-22,93
+Pendik;Ramazanoğlu;333 ₺/m 2;169.845 ₺;14 yıl;%7,16;%36,36
+Pendik;Sanayi;302 ₺/m 2;298.504 ₺;16 yıl;%6,43;%12,06
+Pendik;Sapan Bağları;391 ₺/m 2;59.432 ₺;17 yıl;%5,87;%-7,45
+Pendik;Sülüntepe;360 ₺/m 2;- ₺;-;-;-
+Pendik;Şeyhli;370 ₺/m 2;37.340 ₺;18 yıl;%5,67;%30,34
+Pendik;Velibaba;322 ₺/m 2;124.733 ₺;16 yıl;%6,25;%27,87
+Pendik;Yayalar;606 ₺/m 2;108.436 ₺;14 yıl;%7,15;%86,56
+Pendik;Yeni;491 ₺/m 2;- ₺;-;-;-
+Pendik;Yenişehir;515 ₺/m 2;40.700 ₺;16 yıl;%6,34;%28,05
+Pendik;Yeşilbağlar;488 ₺/m 2;63.938 ₺;16 yıl;%6,21;%25,27
+Sancaktepe;Abdurrahmangazi;337 ₺/m 2;51.562 ₺;19 yıl;%5,34;%20,73
+Sancaktepe;Akpınar;306 ₺/m 2;86.640 ₺;21 yıl;%4,73;%59,40
+Sancaktepe;Atatürk;292 ₺/m 2;45.303 ₺;17 yıl;%5,91;%39,43
+Sancaktepe;Emek;358 ₺/m 2;157.701 ₺;11 yıl;%9,12;%55,30
+Sancaktepe;Eyüp Sultan;319 ₺/m 2;79.045 ₺;13 yıl;%7,61;%32,74
+Sancaktepe;Fatih;320 ₺/m 2;184.218 ₺;15 yıl;%6,47;%59,14
+Sancaktepe;Hilal;299 ₺/m 2;137.475 ₺;-;-;%37,19
+Sancaktepe;İnönü;261 ₺/m 2;39.151 ₺;13 yıl;%7,54;%28,62
+Sancaktepe;Kemal Türkler;300 ₺/m 2;33.000 ₺;19 yıl;%5,19;%44,56
+Sancaktepe;Meclis;333 ₺/m 2;47.903 ₺;16 yıl;%6,07;%33,10
+Sancaktepe;Merve;257 ₺/m 2;114.116 ₺;12 yıl;%8,24;%14,22
+Sancaktepe;Mevlana;244 ₺/m 2;65.086 ₺;16 yıl;%6,11;%35,14
+Sancaktepe;Osmangazi;299 ₺/m 2;68.802 ₺;14 yıl;%7,13;%37,09
+Sancaktepe;Paşaköy;-;-;-;-;-
+Sancaktepe;Safa;253 ₺/m 2;50.578 ₺;13 yıl;%7,99;%39,43
+Sancaktepe;Sarıgazi;309 ₺/m 2;66.074 ₺;-;-;%49,09
+Sancaktepe;Veysel Karani;288 ₺/m 2;72.681 ₺;-;-;%20,01
+Sancaktepe;Yenidoğan;280 ₺/m 2;71.125 ₺;16 yıl;%6,32;%33,95
+Sancaktepe;Yunus Emre;270 ₺/m 2;48.880 ₺;18 yıl;%5,70;%48,56
+Sarıyer;Ayazağa;977 ₺/m 2;- ₺;-;-;-
+Sarıyer;Bahçeköy Kemer;330 ₺/m 2;36.583 ₺;14 yıl;%7,27;%26,60
+Sarıyer;Bahçeköy Merkez;676 ₺/m 2;250.877 ₺;-;-;%180,61
+Sarıyer;Bahçeköy Yeni;384 ₺/m 2;41.513 ₺;13 yıl;%7,69;%41,25
+Sarıyer;Baltalimanı;334 ₺/m 2;32.720 ₺;74 yıl;%1,35;%-8,24
+Sarıyer;Büyükdere;445 ₺/m 2;37.812 ₺;17 yıl;%6,00;%32,58
+Sarıyer;Cumhuriyet;470 ₺/m 2;40.900 ₺;12 yıl;%8,46;%63,74
+Sarıyer;Çamlıtepe;464 ₺/m 2;23.684 ₺;-;-;%106,64
+Sarıyer;Çayırbaşı;395 ₺/m 2;44.649 ₺;68 yıl;%1,46;%5,55
+Sarıyer;Darüşşafaka;563 ₺/m 2;78.245 ₺;17 yıl;%5,97;%42,52
+Sarıyer;Demirciköy;428 ₺/m 2;155.004 ₺;24 yıl;%4,13;%5,81
+Sarıyer;Emirgan;371 ₺/m 2;51.175 ₺;32 yıl;%3,14;%-46,43
+Sarıyer;Fatih Sultan Mehmet;415 ₺/m 2;37.323 ₺;-;-;%33,15
+Sarıyer;Ferahevler;374 ₺/m 2;56.510 ₺;-;-;%-3,08
+Sarıyer;Garipçe;-;-;-;-;-
+Sarıyer;Gümüşdere;-;-;-;-;-
+Sarıyer;Huzur;963 ₺/m 2;180.163 ₺;15 yıl;%6,80;%35,65
+Sarıyer;İstinye;516 ₺/m 2;34.600 ₺;19 yıl;%5,15;%12,09
+Sarıyer;Kazım Karabekir Paşa;314 ₺/m 2;29.531 ₺;13 yıl;%7,54;%29,85
+Sarıyer;Kireçburnu;621 ₺/m 2;- ₺;-;-;-
+Sarıyer;Kısırkaya;-;-;-;-;-
+Sarıyer;Kocataş;326 ₺/m 2;31.911 ₺;27 yıl;%3,68;%36,72
+Sarıyer;Kumköy;614 ₺/m 2;156.442 ₺;20 yıl;%4,91;%46,57
+Sarıyer;Maden;486 ₺/m 2;45.170 ₺;16 yıl;%6,10;%-4,44
+Sarıyer;Maslak;707 ₺/m 2;213.423 ₺;14 yıl;%7,28;%22,39
+Sarıyer;Pınar;342 ₺/m 2;68.093 ₺;-;-;%8,56
+Sarıyer;Poligon;434 ₺/m 2;164.931 ₺;-;-;%26,46
+Sarıyer;Ptt Evleri;356 ₺/m 2;40.208 ₺;12 yıl;%8,50;%31,96
+Sarıyer;Reşitpaşa;494 ₺/m 2;62.694 ₺;12 yıl;%8,01;%9,85
+Sarıyer;Rumelifeneri;487 ₺/m 2;104.765 ₺;23 yıl;%4,43;%50,52
+Sarıyer;Rumelihisarı;658 ₺/m 2;150.103 ₺;-;-;%150,78
+Sarıyer;Rumelikavağı;606 ₺/m 2;141.179 ₺;13 yıl;%7,43;%99,09
+Sarıyer;Sarıyer Merkez;518 ₺/m 2;73.090 ₺;22 yıl;%4,60;%-4,34
+Sarıyer;Tarabya;597 ₺/m 2;59.726 ₺;21 yıl;%4,66;%50,46
+Sarıyer;Uskumruköy;628 ₺/m 2;57.135 ₺;14 yıl;%7,21;%9,49
+Sarıyer;Yeni;488 ₺/m 2;49.800 ₺;18 yıl;%5,45;%32,29
+Sarıyer;Yeniköy;652 ₺/m 2;58.671 ₺;-;-;%42,85
+Sarıyer;Zekeriyaköy;711 ₺/m 2;208.390 ₺;19 yıl;%5,13;%-13,71
+Silivri;Akören;-;-;-;-;-
+Silivri;Alibey;341 ₺/m 2;28.988 ₺;14 yıl;%7,08;%29,61
+Silivri;Alipaşa;249 ₺/m 2;77.790 ₺;17 yıl;%5,91;%12,36
+Silivri;Bekirli;-;-;-;-;-
+Silivri;Beyciler;-;-;-;-;-
+Silivri;Büyük Çavuşlu;88 ₺/m 2;28.118 ₺;41 yıl;%2,43;%-40,12
+Silivri;Büyük Kılıçlı;-;-;-;-;-
+Silivri;Büyük Sinekli;-;-;-;-;-
+Silivri;Cumhuriyet;412 ₺/m 2;- ₺;-;-;-
+Silivri;Çanta Balaban;249 ₺/m 2;- ₺;-;-;-
+Silivri;Çanta Sancaktepe;229 ₺/m 2;802.731 ₺;-;-;%51,16
+Silivri;Çayırdere;-;-;-;-;-
+Silivri;Çeltik;-;-;-;-;-
+Silivri;Danamandıra;-;-;-;-;-
+Silivri;Değirmenköy Fevzipaşa;200 ₺/m 2;163.783 ₺;19 yıl;%5,38;%50,28
+Silivri;Değirmenköy İsmetpaşa;167 ₺/m 2;- ₺;-;-;-
+Silivri;Fatih;282 ₺/m 2;25.636 ₺;10 yıl;%9,86;%40,90
+Silivri;Fener;224 ₺/m 2;155.785 ₺;-;-;%24,84
+Silivri;Fevzipaşa;-;-;-;-;-
+Silivri;Gazitepe;-;-;-;-;-
+Silivri;Gümüşyaka;238 ₺/m 2;27.330 ₺;17 yıl;%5,82;%33,24
+Silivri;İsmetpaşa;-;-;-;-;-
+Silivri;Kadıköy;-;-;-;-;-
+Silivri;Kavaklı;-;-;-;-;-
+Silivri;Kavaklı Hürriyet;350 ₺/m 2;- ₺;-;-;-
+Silivri;Kavaklı İstiklal;344 ₺/m 2;1.234.442 ₺;-;-;%124,91
+Silivri;Kurfallı;-;-;-;-;-
+Silivri;Küçük Kılıçlı;-;-;-;-;-
+Silivri;Küçük Sinekli;-;-;-;-;-
+Silivri;Mimar Sinan;396 ₺/m 2;68.582 ₺;15 yıl;%6,63;%79,49
+Silivri;Ortaköy;167 ₺/m 2;267.816 ₺;-;-;%-14,62
+Silivri;Piri Mehmet Paşa;361 ₺/m 2;25.595 ₺;14 yıl;%7,24;%21,18
+Silivri;Sayalar;-;-;-;-;-
+Silivri;Selimpaşa;247 ₺/m 2;187.780 ₺;24 yıl;%4,10;%-4,45
+Silivri;Semizkumlar;286 ₺/m 2;53.470 ₺;18 yıl;%5,66;%30,87
+Silivri;Seymen;-;-;-;-;-
+Silivri;Yeni;579 ₺/m 2;- ₺;-;-;-
+Silivri;Yolçatı;-;-;-;-;-
+Sultanbeyli;Abdurrahmangazi;383 ₺/m 2;46.711 ₺;18 yıl;%5,64;%52,97
+Sultanbeyli;Adil;286 ₺/m 2;88.663 ₺;11 yıl;%9,04;%39,28
+Sultanbeyli;Ahmet Yesevi;261 ₺/m 2;23.532 ₺;17 yıl;%5,72;%48,82
+Sultanbeyli;Akşemseddin;308 ₺/m 2;75.269 ₺;-;%11,13;%42,10
+Sultanbeyli;Battalgazi;263 ₺/m 2;109.737 ₺;16 yıl;%6,21;%22,21
+Sultanbeyli;Fatih;249 ₺/m 2;29.875 ₺;13 yıl;%7,84;%35,96
+Sultanbeyli;Hamidiye;255 ₺/m 2;38.938 ₺;34 yıl;%2,92;%30,28
+Sultanbeyli;Hasanpaşa;261 ₺/m 2;42.022 ₺;19 yıl;%5,39;%25,71
+Sultanbeyli;Mecidiye;240 ₺/m 2;36.912 ₺;-;-;%48,20
+Sultanbeyli;Mehmet Akif;303 ₺/m 2;65.226 ₺;19 yıl;%5,33;%32,47
+Sultanbeyli;Mimar Sinan;293 ₺/m 2;52.178 ₺;11 yıl;%9,29;%48,22
+Sultanbeyli;Necip Fazıl;285 ₺/m 2;44.981 ₺;13 yıl;%7,91;%23,42
+Sultanbeyli;Orhan Gazi;287 ₺/m 2;33.524 ₺;14 yıl;%7,16;%12,30
+Sultanbeyli;Turgut Reis;243 ₺/m 2;94.037 ₺;14 yıl;%6,93;%9,04
+Sultanbeyli;Yavuz Selim;392 ₺/m 2;62.316 ₺;-;-;%149,15
+Sultangazi;50. Yıl;228 ₺/m 2;42.118 ₺;16 yıl;%6,25;%36,28
+Sultangazi;75. Yıl;327 ₺/m 2;- ₺;-;-;-
+Sultangazi;Cebeci;246 ₺/m 2;32.485 ₺;21 yıl;%4,86;%26,91
+Sultangazi;Cumhuriyet;205 ₺/m 2;75.550 ₺;-;-;%4,67
+Sultangazi;Esentepe;266 ₺/m 2;- ₺;-;-;-
+Sultangazi;Eski Habipler;274 ₺/m 2;106.482 ₺;25 yıl;%4,03;%20,16
+Sultangazi;Gazi;278 ₺/m 2;37.745 ₺;-;-;%42,31
+Sultangazi;Habibler;147 ₺/m 2;91.400 ₺;34 yıl;%2,93;%-14,44
+Sultangazi;İsmet Paşa;235 ₺/m 2;38.008 ₺;14 yıl;%7,29;%52,42
+Sultangazi;Malkoçoğlu;219 ₺/m 2;42.505 ₺;20 yıl;%4,94;%29,16
+Sultangazi;Sultançiftliği;249 ₺/m 2;33.410 ₺;19 yıl;%5,16;%40,99
+Sultangazi;Uğur Mumcu;215 ₺/m 2;56.884 ₺;23 yıl;%4,42;%20,15
+Sultangazi;Yayla;170 ₺/m 2;45.339 ₺;-;-;%-13,38
+Sultangazi;Yunus Emre;255 ₺/m 2;30.056 ₺;18 yıl;%5,69;%45,85
+Sultangazi;Zübeyde Hanım;245 ₺/m 2;- ₺;-;-;-
+Şile;Ağaçdere;-;-;-;-;-
+Şile;Ağva Merkez;536 ₺/m 2;36.969 ₺;-;-;%122,96
+Şile;Ahmetli;439 ₺/m 2;50.030 ₺;20 yıl;%5,09;%17,92
+Şile;Akçakese;169 ₺/m 2;- ₺;-;-;-
+Şile;Alacalı;-;-;-;-;-
+Şile;Avcıkoru;-;-;-;-;-
+Şile;Balibey;348 ₺/m 2;38.665 ₺;18 yıl;%5,46;%13,99
+Şile;Bıçkıdere;-;-;-;-;-
+Şile;Bozgoca;-;-;-;-;-
+Şile;Bucaklı;-;-;-;-;-
+Şile;Çataklı;-;-;-;-;-
+Şile;Çavuş;524 ₺/m 2;86.382 ₺;22 yıl;%4,63;%43,32
+Şile;Çayırbaşı;465 ₺/m 2;- ₺;-;-;-
+Şile;Çelebi;-;-;-;-;-
+Şile;Çengilli;-;-;-;-;-
+Şile;Darlık;-;-;-;-;-
+Şile;Değirmençayırı;-;-;-;-;-
+Şile;Doğancılı;223 ₺/m 2;50.413 ₺;25 yıl;%3,96;%-27,58
+Şile;Erenler;-;-;-;-;-
+Şile;Esenceli;-;-;-;-;-
+Şile;Geredeli;-;-;-;-;-
+Şile;Göçe;-;- ₺;-;-;-
+Şile;Gökmaşlı;-;-;-;-;-
+Şile;Göksu;-;-;-;-;-
+Şile;Hacı Kasım;942 ₺/m 2;28.262 ₺;15 yıl;%6,75;%142,40
+Şile;Hacıllı;-;-;-;-;-
+Şile;Hasanlı;-;-;-;-;-
+Şile;İmrendere;339 ₺/m 2;- ₺;-;-;-
+Şile;İmrenli;282 ₺/m 2;37.467 ₺;28 yıl;%3,59;%-11,45
+Şile;İsaköy;-;-;-;-;-
+Şile;Kabakoz;308 ₺/m 2;- ₺;-;-;-
+Şile;Kadıköy;-;-;-;-;-
+Şile;Kalem;-;-;-;-;-
+Şile;Karabeyli;-;-;-;-;-
+Şile;Karacaköy;241 ₺/m 2;- ₺;-;-;-
+Şile;Karakiraz;-;-;-;-;-
+Şile;Karamandere;-;-;-;-;-
+Şile;Kervansaray;-;-;-;-;-
+Şile;Kızılca;379 ₺/m 2;54.504 ₺;-;-;%-27,81
+Şile;Korucu;-;-;-;-;-
+Şile;Kömürlük;-;-;-;-;-
+Şile;Kumbaba;456 ₺/m 2;61.515 ₺;20 yıl;%5,13;%31,89
+Şile;Kurfallı;-;-;-;-;-
+Şile;Kurna;-;-;-;-;-
+Şile;Meşrutiyet;406 ₺/m 2;41.367 ₺;18 yıl;%5,54;%48,56
+Şile;Oruçoğlu;-;-;-;-;-
+Şile;Osmanköy;-;-;-;-;-
+Şile;Ovacık;-;-;-;-;-
+Şile;Sahilköy;357 ₺/m 2;74.355 ₺;14 yıl;%6,99;%57,82
+Şile;Satmazlı;-;-;-;-;-
+Şile;Sofular;-;-;-;-;-
+Şile;Soğullu;-;-;-;-;-
+Şile;Sortullu;-;-;-;-;-
+Şile;Şuayipli;-;-;-;-;-
+Şile;Teke;-;-;-;-;-
+Şile;Ulupelit;-;-;-;-;-
+Şile;Üvezli;-;-;-;-;-
+Şile;Yaka;-;-;-;-;-
+Şile;Yaylalı;-;-;-;-;-
+Şile;Yazımanayır;-;-;-;-;-
+Şile;Yeniköy;-;-;-;-;-
+Şile;Yeşilvadi;240 ₺/m 2;47.354 ₺;21 yıl;%4,72;%-10,91
+Şişli;19 Mayıs;496 ₺/m 2;72.869 ₺;15 yıl;%6,48;%31,66
+Şişli;Bozkurt;702 ₺/m 2;68.841 ₺;15 yıl;%6,68;%28,58
+Şişli;Cumhuriyet;666 ₺/m 2;144.489 ₺;14 yıl;%7,35;%47,97
+Şişli;Duatepe;332 ₺/m 2;67.148 ₺;27 yıl;%3,68;%-3,94
+Şişli;Ergenekon;502 ₺/m 2;82.342 ₺;16 yıl;%6,43;%28,83
+Şişli;Esentepe;797 ₺/m 2;190.506 ₺;14 yıl;%7,24;%38,82
+Şişli;Eskişehir;333 ₺/m 2;18.297 ₺;19 yıl;%5,33;%-17,22
+Şişli;Feriköy;412 ₺/m 2;50.304 ₺;23 yıl;%4,41;%-9,26
+Şişli;Fulya;552 ₺/m 2;80.026 ₺;19 yıl;%5,30;%19,26
+Şişli;Gülbahar;384 ₺/m 2;59.496 ₺;15 yıl;%6,46;%60,93
+Şişli;Halaskargazi;674 ₺/m 2;101.110 ₺;21 yıl;%4,83;%22,76
+Şişli;Halide Edip Adıvar;343 ₺/m 2;80.701 ₺;16 yıl;%6,09;%22,34
+Şişli;Halil Rıfat Paşa;607 ₺/m 2;25.509 ₺;13 yıl;%7,94;%52,55
+Şişli;Harbiye;919 ₺/m 2;274.783 ₺;10 yıl;%9,57;%6,71
+Şişli;İnönü;506 ₺/m 2;57.166 ₺;13 yıl;%7,73;%34,77
+Şişli;İzzet Paşa;303 ₺/m 2;29.043 ₺;42 yıl;%2,40;%-54,01
+Şişli;Kaptanpaşa;578 ₺/m 2;120.165 ₺;15 yıl;%6,78;%39,26
+Şişli;Kuştepe;362 ₺/m 2;60.846 ₺;17 yıl;%6,05;%-5,67
+Şişli;Mahmut Şevket Paşa;226 ₺/m 2;28.875 ₺;-;-;%22,58
+Şişli;Mecidiyeköy;392 ₺/m 2;48.608 ₺;16 yıl;%6,44;%1,12
+Şişli;Merkez;540 ₺/m 2;85.920 ₺;15 yıl;%6,79;%16,91
+Şişli;Meşrutiyet;536 ₺/m 2;64.898 ₺;14 yıl;%7,32;%32,96
+Şişli;Paşa;306 ₺/m 2;33.032 ₺;26 yıl;%3,79;%15,42
+Şişli;Teşvikiye;832 ₺/m 2;98.164 ₺;13 yıl;%7,48;%28,61
+Şişli;Yayla;371 ₺/m 2;24.482 ₺;26 yıl;%3,91;%67,18
+Tuzla;Akfırat;-;-;-;-;-
+Tuzla;Anadolu;304 ₺/m 2;188.572 ₺;-;-;%-14,31
+Tuzla;Aydınlı;425 ₺/m 2;50.118 ₺;15 yıl;%6,59;%34,18
+Tuzla;Aydıntepe;366 ₺/m 2;34.776 ₺;16 yıl;%6,36;%33,67
+Tuzla;Cami;437 ₺/m 2;- ₺;-;-;-
+Tuzla;Evliya Çelebi;531 ₺/m 2;85.027 ₺;12 yıl;%8,07;%28,67
+Tuzla;Fatih;238 ₺/m 2;780.155 ₺;-;-;%-15,33
+Tuzla;İçmeler;459 ₺/m 2;40.882 ₺;15 yıl;%6,51;%9,67
+Tuzla;İstasyon;510 ₺/m 2;66.294 ₺;17 yıl;%6,01;%15,82
+Tuzla;Mescit;507 ₺/m 2;54.263 ₺;17 yıl;%5,93;%35,61
+Tuzla;Mimar Sinan;281 ₺/m 2;28.371 ₺;25 yıl;%3,93;%-4,48
+Tuzla;Orhanlı;455 ₺/m 2;220.321 ₺;13 yıl;%7,66;%32,89
+Tuzla;Orta;414 ₺/m 2;168.335 ₺;10 yıl;%9,85;%19,94
+Tuzla;Postane;531 ₺/m 2;73.331 ₺;25 yıl;%4,02;%21,05
+Tuzla;Şifa;253 ₺/m 2;- ₺;-;-;-
+Tuzla;Tepeören;440 ₺/m 2;2.495.481 ₺;17 yıl;%5,90;%37,59
+Tuzla;Yayla;637 ₺/m 2;40.750 ₺;12 yıl;%8,60;%95,44
+Ümraniye;Adem Yavuz;315 ₺/m 2;33.418 ₺;14 yıl;%6,96;%59,35
+Ümraniye;Altınşehir;321 ₺/m 2;35.335 ₺;16 yıl;%6,13;%31,27
+Ümraniye;Armağanevler;420 ₺/m 2;38.653 ₺;18 yıl;%5,49;%36,79
+Ümraniye;Aşağı Dudullu;403 ₺/m 2;47.981 ₺;20 yıl;%5,07;%69,89
+Ümraniye;Atakent;478 ₺/m 2;48.761 ₺;11 yıl;%9,09;%35,34
+Ümraniye;Atatürk;489 ₺/m 2;40.623 ₺;15 yıl;%6,57;%32,05
+Ümraniye;Cemil Meriç;344 ₺/m 2;41.220 ₺;18 yıl;%5,68;%70,97
+Ümraniye;Çakmak;449 ₺/m 2;47.615 ₺;14 yıl;%7,27;%74,15
+Ümraniye;Çamlık;480 ₺/m 2;40.817 ₺;15 yıl;%6,73;%44,50
+Ümraniye;Dumlupınar;197 ₺/m 2;- ₺;-;-;-
+Ümraniye;Elmalıkent;296 ₺/m 2;- ₺;-;-;-
+Ümraniye;Esenevler;687 ₺/m 2;49.435 ₺;10 yıl;%9,78;%179,58
+Ümraniye;Esenkent;408 ₺/m 2;198.491 ₺;25 yıl;%4,00;%-2,16
+Ümraniye;Esenşehir;358 ₺/m 2;56.210 ₺;25 yıl;%4,03;%39,72
+Ümraniye;Fatih Sultan Mehmet;927 ₺/m 2;152.055 ₺;7 yıl;%15,37;%28,08
+Ümraniye;Finanskent;696 ₺/m 2;62.612 ₺;13 yıl;%7,43;%17,74
+Ümraniye;Hekimbaşı;223 ₺/m 2;120.877 ₺;-;-;%16,79
+Ümraniye;Huzur;258 ₺/m 2;25.012 ₺;-;-;%-23,51
+Ümraniye;Ihlamurkuyu;341 ₺/m 2;34.485 ₺;12 yıl;%8,27;%68,39
+Ümraniye;İnkılap;500 ₺/m 2;48.498 ₺;15 yıl;%6,63;%75,74
+Ümraniye;İstiklal;465 ₺/m 2;49.751 ₺;13 yıl;%7,61;%39,15
+Ümraniye;Kazım Karabekir;242 ₺/m 2;50.864 ₺;-;-;%18,27
+Ümraniye;Madenler;432 ₺/m 2;60.422 ₺;17 yıl;%5,93;%52,57
+Ümraniye;Mehmet Akif;568 ₺/m 2;48.303 ₺;15 yıl;%6,75;%89,22
+Ümraniye;Namık Kemal;442 ₺/m 2;57.519 ₺;16 yıl;%6,22;%35,08
+Ümraniye;Necip Fazıl;374 ₺/m 2;52.334 ₺;19 yıl;%5,18;%30,47
+Ümraniye;Parseller;301 ₺/m 2;41.492 ₺;25 yıl;%3,97;%24,57
+Ümraniye;Site;476 ₺/m 2;52.808 ₺;9 yıl;%10,60;%17,36
+Ümraniye;Şerifali;458 ₺/m 2;109.927 ₺;16 yıl;%6,30;%43,00
+Ümraniye;Tantavi;640 ₺/m 2;71.018 ₺;12 yıl;%8,06;%19,31
+Ümraniye;Tatlısu;471 ₺/m 2;108.394 ₺;18 yıl;%5,50;%34,69
+Ümraniye;Tepeüstü;336 ₺/m 2;54.436 ₺;9 yıl;%10,78;%53,51
+Ümraniye;Topağacı;249 ₺/m 2;22.118 ₺;-;-;%37,94
+Ümraniye;Yamanevler;475 ₺/m 2;55.998 ₺;17 yıl;%5,95;%11,61
+Ümraniye;Yukarı Dudullu;392 ₺/m 2;63.938 ₺;14 yıl;%7,28;%47,16
+Üsküdar;Acıbadem;1.057 ₺/m 2;116.318 ₺;11 yıl;%8,96;%32,66
+Üsküdar;Ahmediye;720 ₺/m 2;47.504 ₺;-;-;%90,26
+Üsküdar;Altunizade;733 ₺/m 2;197.123 ₺;18 yıl;%5,44;%40,32
+Üsküdar;Aziz Mahmut Hüdayi;600 ₺/m 2;72.586 ₺;21 yıl;%4,74;%12,45
+Üsküdar;Bahçelievler;646 ₺/m 2;30.338 ₺;17 yıl;%5,87;%63,54
+Üsküdar;Barbaros;593 ₺/m 2;64.027 ₺;17 yıl;%5,83;%4,00
+Üsküdar;Beylerbeyi;821 ₺/m 2;97.714 ₺;13 yıl;%7,89;%98,35
+Üsküdar;Bulgurlu;359 ₺/m 2;61.411 ₺;29 yıl;%3,50;%13,87
+Üsküdar;Burhaniye;596 ₺/m 2;162.746 ₺;14 yıl;%6,91;%141,98
+Üsküdar;Cumhuriyet;427 ₺/m 2;39.241 ₺;23 yıl;%4,35;%52,84
+Üsküdar;Çengelköy;658 ₺/m 2;108.492 ₺;17 yıl;%5,96;%90,62
+Üsküdar;Ferah;489 ₺/m 2;42.527 ₺;12 yıl;%8,62;%69,22
+Üsküdar;Güzeltepe;330 ₺/m 2;30.314 ₺;46 yıl;%2,16;%-25,91
+Üsküdar;İcadiye;451 ₺/m 2;59.559 ₺;18 yıl;%5,70;%2,26
+Üsküdar;Kandilli;591 ₺/m 2;159.540 ₺;28 yıl;%3,63;%3,53
+Üsküdar;Kirazlıtepe;786 ₺/m 2;53.438 ₺;10 yıl;%9,84;%42,95
+Üsküdar;Kısıklı;629 ₺/m 2;80.451 ₺;12 yıl;%8,51;%73,73
+Üsküdar;Kuleli;-;-;-;-;-
+Üsküdar;Kuzguncuk;762 ₺/m 2;147.851 ₺;-;-;%27,04
+Üsküdar;Küçük Çamlıca;381 ₺/m 2;43.400 ₺;-;%15,44;%16,91
+Üsküdar;Küçüksu;638 ₺/m 2;93.813 ₺;-;-;%102,94
+Üsküdar;Küplüce;282 ₺/m 2;42.880 ₺;-;%58,36;%17,10
+Üsküdar;Mehmet Akif Ersoy;989 ₺/m 2;58.379 ₺;-;%20,95;%271,93
+Üsküdar;Mimar Sinan;755 ₺/m 2;53.636 ₺;14 yıl;%7,40;%61,87
+Üsküdar;Muratreis;435 ₺/m 2;44.324 ₺;19 yıl;%5,40;%28,92
+Üsküdar;Salacak;619 ₺/m 2;38.407 ₺;14 yıl;%7,31;%87,51
+Üsküdar;Selami Ali;461 ₺/m 2;56.195 ₺;18 yıl;%5,58;%15,39
+Üsküdar;Selimiye;478 ₺/m 2;49.747 ₺;18 yıl;%5,49;%42,34
+Üsküdar;Sultantepe;620 ₺/m 2;164.233 ₺;21 yıl;%4,83;%19,05
+Üsküdar;Ünalan;504 ₺/m 2;46.888 ₺;12 yıl;%8,51;%72,90
+Üsküdar;Valide-i Atik;489 ₺/m 2;49.827 ₺;16 yıl;%6,26;%19,39
+Üsküdar;Yavuztürk;274 ₺/m 2;30.176 ₺;12 yıl;%8,36;%20,65
+Üsküdar;Zeynep Kamil;518 ₺/m 2;33.662 ₺;-;-;%16,05
+Zeytinburnu;Beştelsiz;385 ₺/m 2;40.028 ₺;20 yıl;%4,93;%21,02
+Zeytinburnu;Çırpıcı;292 ₺/m 2;49.611 ₺;14 yıl;%7,24;%36,68
+Zeytinburnu;Gökalp;455 ₺/m 2;40.986 ₺;13 yıl;%7,88;%94,69
+Zeytinburnu;Kazlıçeşme;729 ₺/m 2;286.571 ₺;18 yıl;%5,54;%21,88
+Zeytinburnu;Maltepe;420 ₺/m 2;59.201 ₺;16 yıl;%6,13;%25,93
+Zeytinburnu;Merkezefendi;354 ₺/m 2;36.430 ₺;15 yıl;%6,47;%55,03
+Zeytinburnu;Nuripaşa;319 ₺/m 2;41.490 ₺;14 yıl;%6,92;%54,86
+Zeytinburnu;Seyitnizam;414 ₺/m 2;62.450 ₺;16 yıl;%6,31;%37,43
+Zeytinburnu;Sümer;287 ₺/m 2;31.565 ₺;15 yıl;%6,56;%52,31
+Zeytinburnu;Telsiz;425 ₺/m 2;67.197 ₺;17 yıl;%5,84;%53,96
+Zeytinburnu;Veliefendi;291 ₺/m 2;40.144 ₺;14 yıl;%7,03;%39,31
+Zeytinburnu;Yenidoğan;334 ₺/m 2;66.124 ₺;19 yıl;%5,13;%42,90
+Zeytinburnu;Yeşiltepe;317 ₺/m 2;46.868 ₺;18 yıl;%5,63;%38,91

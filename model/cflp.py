@@ -42,7 +42,7 @@ def solve_cflp(w, t, r, alpha, Q, Q0, method="cbc", time_limit=120):
     t = np.asarray(t, dtype=float)
     r = np.asarray(r, dtype=float)
 
-    # Opening cost: f_j = alpha * r̄_d(j) * sqrt(Q / Q0)
+    # Opening cost: f_j = alpha * r[j] * sqrt(Q / Q0)
     f = alpha * r * np.sqrt(Q / Q0)
 
     if method == "cbc":
