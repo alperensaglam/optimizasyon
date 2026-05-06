@@ -86,9 +86,9 @@ Traffic-Aware Distribution Center Location project.
 > GeoJSON boundary file) was deemed unnecessary for project purposes.
 
 ### Step 4 — Rent Data
-- Loaded `istanbul_ilce_kira_fiyatlari.csv` and renamed columns
-- Normalized district names to uppercase
-- 15 districts not present in the Endeksa data were filled with the **median rent (357 TL/m²)**
+- Loaded `istanbul_tum_mahalleler.csv` (neighborhood-level) and `istanbul_tum_ilceler.csv` (district-level) for rent data
+- Mismatched neighborhoods were fixed using a dictionary of aliases
+- Filled missing mahalle rents with district-level averages, and remaining with the median rent (357 TL/m²)
 
 ### Step 5 — Traffic Multipliers (IBB API)
 - Fetched 1,000 most recent records from the IBB Traffic Index API
@@ -120,7 +120,7 @@ Traffic-Aware Distribution Center Location project.
 
 | File | Shape / Size | Description |
 |------|-------------|-------------|
-| `neighborhoods.csv` | 890 rows × 6 cols | `neighborhood_id`, `name`, `district`, `lat`, `lon`, `population` |
+| `neighborhoods.csv` | 890 rows × 7 cols | `neighborhood_id`, `name`, `district`, `lat`, `lon`, `population`, `rent_per_m2` |
 | `rents.csv` | 39 rows × 2 cols | `district`, `avg_rent_per_m2` |
 | `travel_times.npy` | (890, 890) float64 | Blended travel time matrix in hours |
 | `travel_times_peak.npy` | (890, 890) float64 | Peak-hour travel time matrix in hours |

@@ -28,10 +28,7 @@ def load_optimization_data():
     """Loads and prepares all data needed for the outer-layer optimization."""
     df_n = pd.read_csv(os.path.join(DATA_DIR, "neighborhoods.csv"))
     t = np.load(os.path.join(DATA_DIR, "travel_times.npy"))
-    df_r = pd.read_csv(os.path.join(DATA_DIR, "rents.csv"))
-    rent_map = dict(zip(df_r["district"], df_r["avg_rent_per_m2"]))
-    
-    r = df_n["district"].map(rent_map).values
+    r = df_n["rent_per_m2"].values
     w = df_n["population"].values
     return w, t, r
 
