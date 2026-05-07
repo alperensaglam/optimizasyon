@@ -23,10 +23,9 @@ import requests
 
 RAW = "data/raw"
 OUT = "data/processed"
-AVG_SPEED_KMH = 30  # average urban driving speed in Istanbul
+AVG_SPEED_KMH = 30
 
-# ── helpers ───────────────────────────────────────────────────────────────────
-
+# helpers
 def haversine_matrix(lats, lons):
     """Pairwise haversine distance matrix for all neighborhood pairs (km)."""
     lats_r = np.radians(lats)
@@ -38,10 +37,9 @@ def haversine_matrix(lats, lons):
     return 2 * 6371.0 * np.arcsin(np.sqrt(a))
 
 def normalize(s):
-    # Python's .upper() maps 'i' → 'I', but Turkish requires 'i' → 'İ'
     return s.strip().replace('i', 'İ').upper()
 
-# ── 1. Muhtarlık JSON → coordinates ──────────────────────────────────────────
+# 1. Muhtarlık JSON → coordinates
 
 print("1. Loading Muhtarlık coordinates...")
 with open(f"{RAW}/Muhtarlık Adres Bilgileri", encoding="utf-8") as f:
@@ -57,11 +55,10 @@ coords = [
     for feat in geojson["features"]
 ]
 df_coords = pd.DataFrame(coords)
-# Aynı mahallede birden fazla muhtarlık olabilir — koordinatları ortala
 df_coords = df_coords.groupby(["name", "district"], as_index=False).agg({"lat": "mean", "lon": "mean"})
 print(f"   {len(df_coords)} unique neighborhoods (after merging multiple muhtarlık per neighborhood)")
 
-# ── 2. pivot.csv → population ────────────────────────────────────────────────
+# 2. pivot.csv → population
 
 print("2. Loading TUIK population data...")
 raw_lines = open(f"{RAW}/pivot.csv", encoding="utf-8-sig").readlines()
@@ -87,7 +84,7 @@ for line in raw_lines:
 df_pop = pd.DataFrame(pop_rows).drop_duplicates(subset=["name", "district"])
 print(f"   {len(df_pop)} neighborhoods with population")
 
-# ── 3. Merge coordinates + population ────────────────────────────────────────
+# 3. Merge coordinates + population
 
 print("3. Merging coordinates and population...")
 df_coords["_key"] = df_coords["name"] + "|" + df_coords["district"]
@@ -136,7 +133,7 @@ df = df.reset_index()
 
 print(f"   Final: {len(df)} neighborhoods")
 
-# ── 4. Rent data ──────────────────────────────────────────────────────────────
+# 4. Rent data
 
 print("4. Processing Endeksa rent data (neighborhood + district)...")
 
@@ -209,13 +206,13 @@ print(f"   Saved → {OUT}/neighborhoods.csv (with rent_per_m2)")
 df_dist_rent[["district", "avg_rent_per_m2"]].to_csv(f"{OUT}/rents.csv", index=False)
 print(f"   Saved → {OUT}/rents.csv (district level, for compatibility)")
 
-# ── 5. IBB Traffic API → τ multipliers ───────────────────────────────────────
+# 5. IBB Traffic API → τ multipliers
 
 print("5. Fetching traffic data from IBB Traffic Index API...")
 RESOURCE_ID = "ba47eacb-a4e1-441c-ae51-0e622d4a18e2"
 API_URL = "https://data.ibb.gov.tr/api/3/action/datastore_search"
 
-tau_peak, tau_offpeak = 1.35, 0.85  # fallback defaults
+tau_peak, tau_offpeak = 1.35, 0.85
 
 try:
     resp = requests.get(
@@ -254,15 +251,15 @@ try:
 except Exception as e:
     print(f"   API error ({e}), using fallback defaults: τ_peak={tau_peak}, τ_offpeak={tau_offpeak}")
 
-# ── 6. Travel time matrices ───────────────────────────────────────────────────
+# 6. Travel time matrices
 
 print("6. Computing travel time matrices...")
 lats = df["lat"].values
 lons = df["lon"].values
 n = len(df)
 
-dist_km   = haversine_matrix(lats, lons)       # (n, n) km
-base_time = dist_km / AVG_SPEED_KMH            # (n, n) hours
+dist_km   = haversine_matrix(lats, lons)  
+base_time = dist_km / AVG_SPEED_KMH          
 
 tt_peak    = base_time * tau_peak
 tt_offpeak = base_time * tau_offpeak
