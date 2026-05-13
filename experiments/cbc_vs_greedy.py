@@ -65,13 +65,18 @@ for n in INSTANCE_SIZES:
         res = solve_cflp(w, t, r, ALPHA, Q, Q0, method=method,
                          time_limit=CBC_TIME_LIMIT)
 
+        # Ensure gap is a proper float (NaN if not available, not empty)
+        gap_val = res["gap"]
+        if gap_val is None or (isinstance(gap_val, float) and np.isnan(gap_val)):
+            gap_val = float("nan")
+
         row = {
             "instance_size":   n,
             "method":          method,
             "runtime_s":       round(res["runtime"], 3),
             "objective_value": round(res["objective"], 2),
             "n_open_dcs":      int(res["y"].sum()),
-            "gap":             res["gap"],
+            "gap":             gap_val,
         }
         rows.append(row)
         print(f"runtime={row['runtime_s']:.2f}s  obj={row['objective_value']:.0f}  "

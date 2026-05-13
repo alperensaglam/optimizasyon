@@ -20,7 +20,6 @@ from model.cflp import solve_cflp
 
 # ── DATA LOADING ─────────────────────────────────────────────────────────────
 
-BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 DATA_DIR = os.path.join(BASE_DIR, "data", "processed")
 RESULTS_DIR = os.path.join(BASE_DIR, "results")
 
@@ -144,7 +143,7 @@ def run_2d_search(w, t, r, method="nelder_mead", alpha_range=(0.1, 10.0), Q_rang
         return loss
 
     if method == "grid":
-        steps = 5
+        steps = 10
         alphas = np.linspace(alpha_range[0], alpha_range[1], steps)
         Qs = np.linspace(Q_range[0], Q_range[1], steps)
         best_l, best_params = np.inf, (0, 0)
@@ -188,6 +187,46 @@ def run_2d_search(w, t, r, method="nelder_mead", alpha_range=(0.1, 10.0), Q_rang
         
         return {"alpha_opt": float(simplex[0][0]), "Q_opt": float(simplex[0][1]), "L_opt": float(values[0]), "history": history}
 
+# ── SEARCH COMPARISON TABLE ──────────────────────────────────────────────────
+
+def generate_search_comparison(res_golden, res_fib, res_nm, res_grid):
+    """Generates a unified comparison CSV from the four search methods."""
+    rows = [
+        {
+            "method": "Golden Section (1D)",
+            "dimensions": "1D (α only)",
+            "n_evaluations": len(res_golden["history"]),
+            "final_L": round(res_golden["L_opt"], 6),
+            "optimal_alpha": round(res_golden["alpha_opt"], 4),
+            "optimal_Q": "fixed (200,000)",
+        },
+        {
+            "method": "Fibonacci (1D)",
+            "dimensions": "1D (α only)",
+            "n_evaluations": len(res_fib["history"]),
+            "final_L": round(res_fib["L_opt"], 6),
+            "optimal_alpha": round(res_fib["alpha_opt"], 4),
+            "optimal_Q": "fixed (200,000)",
+        },
+        {
+            "method": "Nelder-Mead (2D)",
+            "dimensions": "2D (α, Q)",
+            "n_evaluations": len(res_nm["history"]),
+            "final_L": round(res_nm["L_opt"], 6),
+            "optimal_alpha": round(res_nm["alpha_opt"], 4),
+            "optimal_Q": round(res_nm["Q_opt"], 0),
+        },
+        {
+            "method": "Grid Search (2D)",
+            "dimensions": "2D (α, Q)",
+            "n_evaluations": len(res_grid["history"]),
+            "final_L": round(res_grid["L_opt"], 6),
+            "optimal_alpha": round(res_grid["alpha_opt"], 4),
+            "optimal_Q": round(res_grid["Q_opt"], 0),
+        },
+    ]
+    return pd.DataFrame(rows)
+
 # ── MAIN ANALYSIS ────────────────────────────────────────────────────────────
 
 if __name__ == "__main__":
@@ -208,7 +247,7 @@ if __name__ == "__main__":
     save_results(res_golden, "search_1d_golden.json")
     save_results(res_fib, "search_1d_fibonacci.json")
     
-    # 3. 2D Comparison: Nelder-Mead vs Grid
+    # 3. 2D Comparison: Nelder-Mead vs Grid (10×10)
     print("\n--- 2D Search Comparison ---")
     res_nm = run_2d_search(w, t, r, method="nelder_mead", n_norm=n_norm, s_norm=s_norm, max_iter=20)
     res_grid = run_2d_search(w, t, r, method="grid", n_norm=n_norm, s_norm=s_norm)
@@ -217,3 +256,11 @@ if __name__ == "__main__":
     print(f"Grid Search: alpha={res_grid['alpha_opt']:.4f}, Q={res_grid['Q_opt']:.0f}, Calls={len(res_grid['history'])}")
     save_results(res_nm, "search_2d_nelder_mead.json")
     save_results(res_grid, "search_2d_grid.json")
+
+    # 4. Search Comparison Table
+    print("\n--- Search Comparison Table ---")
+    df_comp = generate_search_comparison(res_golden, res_fib, res_nm, res_grid)
+    comp_path = os.path.join(RESULTS_DIR, "search_comparison.csv")
+    df_comp.to_csv(comp_path, index=False)
+    print(df_comp.to_string(index=False))
+    print(f"\nSaved → {comp_path}")

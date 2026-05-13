@@ -77,7 +77,20 @@ The `data/prepare_data.py` script handles all preprocessing:
 The outer-layer search finds the best (α, Q) pair by minimizing a normalized loss function that balances the number of opened DCs against total service cost:
 
 - **1D Search** (fixed Q): Golden Section and Fibonacci methods
-- **2D Search**: Nelder-Mead simplex and Grid Search
+- **2D Search**: Nelder-Mead simplex and Grid Search (10×10 grid)
+
+### Parameter Notes
+
+The opening cost formula `f_j = α · r̄_d(j) · √(Q/Q₀)` uses the following parameters:
+
+| Parameter | Value | Unit | Description |
+|-----------|-------|------|-------------|
+| `α` | Tuned via search | m²·month | Lease-footprint scaling factor (α = T·S₀). |
+| `Q₀` | 100,000 | population | Reference DC capacity for cost normalization. |
+| `Q` | 200,000 (default) | population | Maximum demand a single DC can serve. |
+| `r̄_d(j)` | From data | TL/m²/month | Commercial rent at candidate location j. |
+
+> **Note on α range:** The proposal gives α=2400 as an example (S₀=200 m², T=12 months). In the outer-layer search, α is tuned over [0.1, 10.0] because Q₀=100,000 amplifies the opening cost term, effectively rescaling the α range while maintaining consistent absolute cost values.
 
 ## Robustness Analysis
 
@@ -107,13 +120,16 @@ python data/prepare_data.py
 # 2. Run solver benchmarks
 python experiments/cbc_vs_greedy.py
 
-# 3. Run parameter optimization
+# 3. Run parameter optimization (generates search_comparison.csv)
 python optimization/search.py
 
 # 4. Run robustness simulation
 python model/robustness.py
 
-# 5. Open the notebook for analysis and visualization
+# 5. Generate all static outputs (maps, figures, comparison tables)
+python generate_outputs.py
+
+# 6. Open the notebook for interactive analysis
 jupyter notebook notebook/main.ipynb
 ```
 
