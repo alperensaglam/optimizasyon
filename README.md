@@ -108,7 +108,7 @@ Monte Carlo simulation perturbs neighborhood demands by ±δ (5%–30%) and meas
 ### Prerequisites
 
 ```bash
-pip install numpy pandas matplotlib seaborn folium ipywidgets pulp requests
+pip install -r requirements.txt
 ```
 
 ### Running the Pipeline
