@@ -134,11 +134,11 @@ def generate_map(t_matrix, scenario_name, alpha=ALPHA, Q=Q, Q0=Q0):
         <div style="font-family: Arial; min-width: 200px;">
             <h4 style="margin:0; color:#e74c3c;">📍 DC: {name}</h4>
             <hr style="margin:4px 0;">
-            <b>İlçe:</b> {district}<br>
-            <b>Atanmış Mahalle:</b> {stats['n_assigned']}<br>
-            <b>Toplam Nüfus:</b> {stats['total_pop']:,}<br>
-            <b>Kapasite Kullanımı:</b> {stats['capacity_pct']}%<br>
-            <b>Kira (TL/m²):</b> {df_n.iloc[j]['rent_per_m2']:.0f}
+            <b>District:</b> {district}<br>
+            <b>Assigned Neighborhoods:</b> {stats['n_assigned']}<br>
+            <b>Total Population:</b> {stats['total_pop']:,}<br>
+            <b>Capacity Usage:</b> {stats['capacity_pct']}%<br>
+            <b>Rent (TL/m²):</b> {df_n.iloc[j]['rent_per_m2']:.0f}
         </div>
         """
         
