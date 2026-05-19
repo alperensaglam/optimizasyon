@@ -103,6 +103,8 @@ Monte Carlo simulation perturbs neighborhood demands by ±δ (5%–30%) and meas
 - **Static visualizations** — CBC vs. Greedy runtime comparison, robustness boxplots, convergence plots, Pareto frontier (all in dark theme)
 - **Interactive dashboard** — Real-time parameter exploration with sliders for α, Q, traffic scenario, demand perturbation δ, and DC subset size, rendered on a Folium map
 
+> **💡 Important Note for Notebook Usage:** To view and interact with the live map dashboard, you must run the final code cell in the notebook. The map does not render automatically upon opening the file.
+
 ## Getting Started
 
 ### Prerequisites
