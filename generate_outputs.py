@@ -59,7 +59,7 @@ print(f"   {len(w)} neighborhoods loaded.")
 
 # ── parameters ────────────────────────────────────────────────────────────────
 
-ALPHA = 1.675
+ALPHA = 1.37         # operating point from the 1D parameter search (Golden+Fibonacci, α≈1.37)
 Q = 200_000.0
 Q0 = 100_000.0
 

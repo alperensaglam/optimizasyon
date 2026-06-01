@@ -33,12 +33,20 @@ Traffic-Aware Distribution Center Location project.
 - **Coverage:** 40 districts (15 missing districts filled with median)
 - **Role in model:** Base rent values `r̄_d(j)` used in opening cost formula `f_j = α · r̄_d(j) · √(Q/Q₀)`
 
-### 4. IBB Traffic Index API (fetched at runtime)
+### 4. IBB Hourly Traffic Density Data Set (fetched at runtime)
 - **Source:** Istanbul Metropolitan Municipality Open Data Portal — CKAN API
-- **URL:** https://data.ibb.gov.tr/dataset/istanbul-trafik-indeksi/resource/ba47eacb-a4e1-441c-ae51-0e622d4a18e2
-- **Content:** Daily minimum, maximum, and average traffic index values for Istanbul (2015–present)
+- **Dataset:** "Hourly Traffic Density Data Set" — one CSV resource per month (2020–2025)
+- **Resource used:** `d291989c-429d-4e61-9c70-1f76294b96b8` ("Ekim 2024 Trafik Yoğunluk Verisi")
+- **Content:** Hourly records per geohash cell — `DATE_TIME`, `LATITUDE`, `LONGITUDE`, `GEOHASH`,
+  `MINIMUM_SPEED`, `MAXIMUM_SPEED`, `AVERAGE_SPEED`, `NUMBER_OF_VEHICLES` (~1.76M rows/month)
 - **Authentication:** None required
-- **Role in model:** Derives traffic multipliers `τ_peak` and `τ_offpeak` for travel time matrices
+- **Role in model:** Provides a one-month average hourly speed profile per location, from which
+  peak / off-peak / blended travel-time matrices are built (spatial mapping to neighborhoods)
+
+> **Note:** An earlier version used the daily "Istanbul Traffic Index" resource
+> (`ba47eacb-…`) with min/max as peak/off-peak proxies. Per supervisor feedback, traffic must be
+> a **one-month average of hourly data** (each hour = average over all days in the month), not a
+> single-day snapshot — hence the switch to the hourly density dataset above.
 
 ---
 
@@ -90,29 +98,34 @@ Traffic-Aware Distribution Center Location project.
 - Mismatched neighborhoods were fixed using a dictionary of aliases
 - Filled missing mahalle rents with district-level averages, and remaining with the median rent (357 TL/m²)
 
-### Step 5 — Traffic Multipliers (IBB API)
-- Fetched 1,000 most recent records from the IBB Traffic Index API
-- Traffic index is on a 0–100 congestion scale
-- Speed factor model: `speed = free_flow × (1 − 0.5 × index / 100)`
-- Multipliers are normalized to average traffic conditions (30 km/h baseline):
-
-```
-τ = avg_speed_factor / target_speed_factor
-```
-
-- Results from IBB data:
-  - `avg_index = 27.8`, `max_index = 60.4`, `min_index = 2.1`
-  - `τ_peak = 1.233` — peak hours are ~23% slower than average
-  - `τ_offpeak = 0.870` — off-peak hours are ~13% faster than average
-- Fallback defaults if API is unavailable: `τ_peak = 1.35`, `τ_offpeak = 0.85`
+### Step 5 — Hourly Speed Profiles (one-month average, spatial)
+- Used one full month of **hourly** traffic density (Ekim 2024).
+- For each hour of the day (0–23), the measured `AVERAGE_SPEED` is averaged over **all days in the
+  month**, per geohash cell, via server-side SQL aggregation (one query per hour; `COUNT(*)` per
+  group = days in month, confirming a true monthly average rather than a single day).
+- This yields a 24-hour speed profile (km/h) for each of ~2,458 geohash cells across Istanbul.
+- **Spatial mapping:** each neighborhood is matched to its `K=3` nearest geohash cells (Haversine),
+  and their profiles are averaged. Neighborhoods farther than 5 km from any cell (≈70 remote/rural
+  ones) fall back to the citywide hourly profile.
+- Peak / off-peak windows are data-driven from the citywide profile:
+  - **Peak** = 6 slowest hours → `[14–19]` (≈53 km/h citywide)
+  - **Off-peak** = 6 fastest hours → `[0–5]` (≈60 km/h citywide)
+  - **Blended** = mean over all 24 hours
+- Resulting neighborhood-level mean speeds: peak ≈ 38.8, off-peak ≈ 49.3, blended ≈ 43.6 km/h.
+- Per-neighborhood speeds are saved to `neighborhood_speeds.csv`.
+- Fallback (API unavailable): uniform speeds peak/off-peak/blended = 40 / 50 / 45 km/h.
 
 ### Step 6 — Travel Time Matrices
-- Computed pairwise Haversine distances between all 890 neighborhood centroids
-- Base travel time: `distance_km / 30 km/h`
-- Three matrices produced:
-  - `travel_times_peak.npy`: base time × `τ_peak`
-  - `travel_times_offpeak.npy`: base time × `τ_offpeak`
-  - `travel_times.npy`: average of peak and off-peak (used as default `t_ij`)
+- Computed pairwise Haversine distances between all 890 neighborhood centroids.
+- For each O–D pair, the effective speed is the **harmonic mean** of the two endpoints' local
+  speeds (correct for averaging speed over a journey split between the two regions).
+- Travel time = `distance_km / effective_speed` (hours); diagonal set to 0.
+- Three matrices produced from the corresponding speed profile:
+  - `travel_times_peak.npy` — peak-hours speed
+  - `travel_times_offpeak.npy` — off-peak (night) speed
+  - `travel_times.npy` — blended (24-hour mean), used as default `t_ij`
+- Mean off-diagonal times: peak ≈ 0.94 h, off-peak ≈ 0.69 h, blended ≈ 0.80 h
+  (peak ≈ 39% slower than off-peak on average).
 
 ---
 
@@ -122,6 +135,7 @@ Traffic-Aware Distribution Center Location project.
 |------|-------------|-------------|
 | `neighborhoods.csv` | 890 rows × 7 cols | `neighborhood_id`, `name`, `district`, `lat`, `lon`, `population`, `rent_per_m2` |
 | `rents.csv` | 39 rows × 2 cols | `district`, `avg_rent_per_m2` |
+| `neighborhood_speeds.csv` | 890 rows × 6 cols | `neighborhood_id`, `name`, `district`, `speed_peak`, `speed_offpeak`, `speed_blended` (km/h) |
 | `travel_times.npy` | (890, 890) float64 | Blended travel time matrix in hours |
 | `travel_times_peak.npy` | (890, 890) float64 | Peak-hour travel time matrix in hours |
 | `travel_times_offpeak.npy` | (890, 890) float64 | Off-peak travel time matrix in hours |

@@ -105,6 +105,14 @@ Monte Carlo simulation perturbs neighborhood demands by ±δ (5%–30%) and meas
 
 > **💡 Important Note for Notebook Usage:** To view and interact with the live map dashboard, you must run the final code cell in the notebook. The map does not render automatically upon opening the file.
 
+> **📁 Output file naming (notebook vs. `generate_outputs.py`):** The two produce *different*
+> visualizations and are deliberately kept in separate files so they never overwrite each other:
+>
+> | Artifact | `generate_outputs.py` (batch, 3-scenario) | Notebook (`main.ipynb`) |
+> |----------|-------------------------------------------|--------------------------|
+> | Figures | `outputs/figures/pareto_curve.png`, `results_summary.png` | `outputs/figures/notebook_pareto_curve.png`, `notebook_results_summary.png` |
+> | Maps | `outputs/maps/interactive_map_{peak,offpeak,blended}.html` | `outputs/maps/notebook_preview_{...}.html` |
+
 ## Getting Started
 
 ### Prerequisites

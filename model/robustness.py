@@ -101,8 +101,9 @@ if __name__ == "__main__":
     w    = df_n["population"].values.astype(float)
     r    = df_n["rent_per_m2"].values.astype(float)
 
-    # Parameters consistent with Furkan's search.py (alpha_opt ≈ 1.675, Q_fixed=200000, Q0=100000)
-    ALPHA = 1.675
+    # Operating point chosen from the 1D parameter search (Golden+Fibonacci agree at α≈1.37,
+    # Q fixed at 200000, Q0=100000). See search_comparison.csv.
+    ALPHA = 1.37
     Q     = 200_000.0
     Q0    = 100_000.0
     DELTAS   = [0.05, 0.10, 0.20, 0.30]

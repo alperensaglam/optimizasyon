@@ -6,13 +6,18 @@ Inputs  (data/raw/):
   - Muhtarlık Adres Bilgileri  : IBB muhtarlık GeoJSON (neighborhood coordinates)
   - pivot.csv                  : TUIK neighborhood populations (2025)
   - istanbul_ilce_kira_fiyatlari.csv : Endeksa district-level rent per m²
+  - IBB Hourly Traffic Density (fetched live) : month of hourly geohash speeds
 
 Outputs (data/processed/):
   - neighborhoods.csv          : neighborhood id, name, district, lat, lon, population (w_i)
   - rents.csv                  : district, avg rent per m² (r̄_d(j))
-  - travel_times_peak.npy      : travel time matrix — peak traffic (hours)
-  - travel_times_offpeak.npy   : travel time matrix — off-peak traffic (hours)
-  - travel_times.npy           : blended (average of peak and off-peak)
+  - neighborhood_speeds.csv    : per-neighborhood peak/offpeak/blended speed (km/h)
+  - travel_times_peak.npy      : travel time matrix — peak-hours speed (hours)
+  - travel_times_offpeak.npy   : travel time matrix — off-peak (night) speed (hours)
+  - travel_times.npy           : blended (24-hour mean speed)
+
+Travel times are built from a one-month average of HOURLY traffic speeds
+(see section 5), not a single day's snapshot.
 """
 
 import json
@@ -23,7 +28,6 @@ import requests
 
 RAW = "data/raw"
 OUT = "data/processed"
-AVG_SPEED_KMH = 30
 
 # helpers
 def haversine_matrix(lats, lons):
@@ -34,6 +38,15 @@ def haversine_matrix(lats, lons):
     dlon = lons_r[:, None] - lons_r[None, :]
     a = (np.sin(dlat / 2) ** 2
          + np.cos(lats_r[:, None]) * np.cos(lats_r[None, :]) * np.sin(dlon / 2) ** 2)
+    return 2 * 6371.0 * np.arcsin(np.sqrt(a))
+
+def haversine_to_points(lat0, lon0, lats, lons):
+    """Haversine distance (km) from a single point to an array of points."""
+    lat0_r, lon0_r = np.radians(lat0), np.radians(lon0)
+    lats_r, lons_r = np.radians(lats), np.radians(lons)
+    dlat = lats_r - lat0_r
+    dlon = lons_r - lon0_r
+    a = np.sin(dlat / 2) ** 2 + np.cos(lat0_r) * np.cos(lats_r) * np.sin(dlon / 2) ** 2
     return 2 * 6371.0 * np.arcsin(np.sqrt(a))
 
 def normalize(s):
@@ -206,71 +219,132 @@ print(f"   Saved → {OUT}/neighborhoods.csv (with rent_per_m2)")
 df_dist_rent[["district", "avg_rent_per_m2"]].to_csv(f"{OUT}/rents.csv", index=False)
 print(f"   Saved → {OUT}/rents.csv (district level, for compatibility)")
 
-# 5. IBB Traffic API → τ multipliers
+# 5. IBB Hourly Traffic Density → neighborhood hourly speed profiles
+#
+# Methodology (per supervisor feedback): traffic is NOT taken from a single
+# day. We use one full month of HOURLY traffic density and, for every hour of
+# the day (0–23), average the measured AVERAGE_SPEED over all days in that
+# month. This yields a representative 24-hour speed profile per location.
+#
+# The hourly dataset is spatial: each record is a geohash cell with lat/lon and
+# the measured speed for that hour. We map every neighborhood to its K nearest
+# geohash cells, giving each neighborhood its own month-averaged hourly speed
+# profile (spatial mapping). Peak / off-peak / blended speeds are then derived
+# from that profile.
 
-print("5. Fetching traffic data from IBB Traffic Index API...")
-RESOURCE_ID = "ba47eacb-a4e1-441c-ae51-0e622d4a18e2"
-API_URL = "https://data.ibb.gov.tr/api/3/action/datastore_search"
+print("5. Fetching hourly traffic density (Ekim 2024) from IBB...")
+SQL_URL          = "https://data.ibb.gov.tr/api/3/action/datastore_search_sql"
+TRAFFIC_RESOURCE = "d291989c-429d-4e61-9c70-1f76294b96b8"  # "Ekim 2024 Trafik Yoğunluk Verisi"
+TRAFFIC_MONTH    = "Ekim 2024"
+K_NEAREST        = 3      # number of nearest geohash cells averaged per neighborhood
+FAR_KM           = 5.0    # beyond this, fall back to the citywide hourly profile
 
-tau_peak, tau_offpeak = 1.35, 0.85
-
-try:
-    resp = requests.get(
-        API_URL,
-        params={"resource_id": RESOURCE_ID, "limit": 1000},
-        timeout=15,
-    )
-    resp.raise_for_status()
-    records = resp.json()["result"]["records"]
-    df_traffic = pd.DataFrame(records)
-    print(f"   {len(records)} records fetched, columns: {list(df_traffic.columns)}")
-
-    avg_col = next(c for c in df_traffic.columns if "ortalama" in c.lower() or "average" in c.lower())
-    max_col = next(c for c in df_traffic.columns if "maksimum" in c.lower() or "maximum" in c.lower())
-    min_col = next(c for c in df_traffic.columns if "minimum" in c.lower())
-
-    for col in [avg_col, max_col, min_col]:
-        df_traffic[col] = pd.to_numeric(df_traffic[col], errors="coerce")
-
-    avg_of_avgs = pd.to_numeric(df_traffic[avg_col], errors="coerce").mean()
-    avg_of_maxes = pd.to_numeric(df_traffic[max_col], errors="coerce").mean()
-    avg_of_mins = pd.to_numeric(df_traffic[min_col], errors="coerce").mean()
-
-    # Index is on a 0-100 congestion scale.
-    # Speed factor: speed = free_flow × (1 - 0.5 × index/100)
-    # τ = avg_speed_factor / target_speed_factor
-    spd_avg  = 1 - 0.5 * avg_of_avgs  / 100  # average traffic conditions
-    spd_peak = 1 - 0.5 * avg_of_maxes / 100  # peak hour (daily max average)
-    spd_off  = 1 - 0.5 * avg_of_mins  / 100  # off-peak (daily min average)
-
-    tau_peak    = spd_avg / spd_peak
-    tau_offpeak = spd_avg / spd_off
-    print(f"   avg_index={avg_of_avgs:.1f}, max_index={avg_of_maxes:.1f}, min_index={avg_of_mins:.1f}")
-    print(f"   τ_peak={tau_peak:.3f}, τ_offpeak={tau_offpeak:.3f} (from IBB data)")
-
-except Exception as e:
-    print(f"   API error ({e}), using fallback defaults: τ_peak={tau_peak}, τ_offpeak={tau_offpeak}")
-
-# 6. Travel time matrices
-
-print("6. Computing travel time matrices...")
 lats = df["lat"].values
 lons = df["lon"].values
-n = len(df)
+n    = len(df)
 
-dist_km   = haversine_matrix(lats, lons)  
-base_time = dist_km / AVG_SPEED_KMH          
+# Uniform-speed fallback (km/h) if the API is unreachable
+FALLBACK = {"peak": 40.0, "offpeak": 50.0, "blended": 45.0}
 
-tt_peak    = base_time * tau_peak
-tt_offpeak = base_time * tau_offpeak
-tt_blended = (tt_peak + tt_offpeak) / 2
+def fetch_hourly_geohash_speeds(resource_id):
+    """Per geohash cell, the month-averaged AVERAGE_SPEED for each hour 0–23.
+
+    One SQL query per hour keeps every response under the datastore's 32k-row
+    cap (≈2.5k geohash cells per hour). The COUNT(*) per group equals the number
+    of days in the month, confirming we average the whole month, not one day.
+    """
+    rows = []
+    for h in range(24):
+        hh = f"{h:02d}"
+        sql = (
+            f'SELECT "GEOHASH" g, "LATITUDE" lat, "LONGITUDE" lon, '
+            f'AVG("AVERAGE_SPEED") s FROM "{resource_id}" '
+            f"WHERE substr(\"DATE_TIME\", 12, 2) = '{hh}' "
+            f'GROUP BY "GEOHASH", "LATITUDE", "LONGITUDE"'
+        )
+        resp = requests.get(SQL_URL, params={"sql": sql}, timeout=120)
+        resp.raise_for_status()
+        for rec in resp.json()["result"]["records"]:
+            rows.append((rec["g"], float(rec["lat"]), float(rec["lon"]), h, float(rec["s"])))
+    return pd.DataFrame(rows, columns=["geohash", "lat", "lon", "hour", "speed"])
+
+try:
+    g = fetch_hourly_geohash_speeds(TRAFFIC_RESOURCE)
+    piv = g.pivot_table(index=["geohash", "lat", "lon"], columns="hour", values="speed")
+    piv = piv.reindex(columns=range(24))
+    gh_speed = piv.values                              # (G, 24) km/h
+    gh_speed = np.where(np.isnan(gh_speed), np.nanmean(gh_speed, axis=1, keepdims=True), gh_speed)
+    gh_lat = piv.index.get_level_values("lat").to_numpy()
+    gh_lon = piv.index.get_level_values("lon").to_numpy()
+
+    # Citywide hourly profile → data-driven peak / off-peak windows
+    city = np.nanmean(gh_speed, axis=0)                # (24,)
+    peak_hours = np.argsort(city)[:6]                  # 6 slowest hours (rush)
+    off_hours  = np.argsort(city)[-6:]                 # 6 fastest hours (night)
+    city_peak, city_off, city_bl = city[peak_hours].mean(), city[off_hours].mean(), city.mean()
+    print(f"   {gh_speed.shape[0]} geohash cells × 24h ({TRAFFIC_MONTH} monthly average)")
+    print(f"   peak hours={sorted(int(h) for h in peak_hours)} ({city_peak:.1f} km/h), "
+          f"offpeak hours={sorted(int(h) for h in off_hours)} ({city_off:.1f} km/h)")
+
+    # Spatial mapping: each neighborhood → mean profile of K nearest geohash cells
+    v_peak, v_off, v_bl = np.empty(n), np.empty(n), np.empty(n)
+    n_far = 0
+    for i in range(n):
+        d = haversine_to_points(lats[i], lons[i], gh_lat, gh_lon)
+        idx = np.argsort(d)[:K_NEAREST]
+        if d[idx[0]] > FAR_KM:                         # remote area → citywide profile
+            v_peak[i], v_off[i], v_bl[i] = city_peak, city_off, city_bl
+            n_far += 1
+        else:
+            sp = gh_speed[idx].mean(axis=0)            # (24,) local hourly profile
+            v_peak[i], v_off[i], v_bl[i] = sp[peak_hours].mean(), sp[off_hours].mean(), sp.mean()
+    print(f"   neighborhood speeds (km/h): peak {v_peak.mean():.1f}, "
+          f"offpeak {v_off.mean():.1f}, blended {v_bl.mean():.1f} "
+          f"({n_far} remote neighborhoods used citywide fallback)")
+
+except Exception as e:
+    print(f"   API error ({e}); falling back to uniform speeds {FALLBACK}")
+    v_peak = np.full(n, FALLBACK["peak"])
+    v_off  = np.full(n, FALLBACK["offpeak"])
+    v_bl   = np.full(n, FALLBACK["blended"])
+
+# 6. Travel time matrices (from real measured speeds)
+#
+# For an origin–destination pair, the effective speed is the harmonic mean of
+# the two endpoints' local speeds (correct for averaging speed over a journey
+# split between the two regions). Travel time = distance / effective speed.
+
+print("6. Computing travel time matrices...")
+dist_km = haversine_matrix(lats, lons)
+
+def travel_times_from_speed(v):
+    """O-D travel-time matrix (hours) using harmonic-mean endpoint speeds."""
+    v_eff = 2.0 / (1.0 / v[:, None] + 1.0 / v[None, :])   # (n, n) km/h
+    tt = dist_km / v_eff
+    np.fill_diagonal(tt, 0.0)
+    return tt
+
+tt_peak    = travel_times_from_speed(v_peak)
+tt_offpeak = travel_times_from_speed(v_off)
+tt_blended = travel_times_from_speed(v_bl)
 
 np.save(f"{OUT}/travel_times_peak.npy",    tt_peak)
 np.save(f"{OUT}/travel_times_offpeak.npy", tt_offpeak)
 np.save(f"{OUT}/travel_times.npy",         tt_blended)
 
+# Persist the per-neighborhood speed profile for documentation / the report
+pd.DataFrame({
+    "neighborhood_id": df["neighborhood_id"],
+    "name":            df["name"],
+    "district":        df["district"],
+    "speed_peak":      np.round(v_peak, 2),
+    "speed_offpeak":   np.round(v_off, 2),
+    "speed_blended":   np.round(v_bl, 2),
+}).to_csv(f"{OUT}/neighborhood_speeds.csv", index=False)
+
 print(f"   Matrix size: {n}×{n}")
 print(f"   Saved → travel_times_peak.npy, travel_times_offpeak.npy, travel_times.npy")
+print(f"   Saved → neighborhood_speeds.csv (per-neighborhood peak/offpeak/blended km/h)")
 
 print("\nDone. data/processed/ contents:")
 import os

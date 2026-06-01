@@ -23,7 +23,7 @@ from model.cflp import solve_cflp
 
 # ── parameters ────────────────────────────────────────────────────────────────
 
-ALPHA = 1.675        # optimal alpha from Furkan's golden-section search
+ALPHA = 1.37         # operating point from the 1D parameter search (Golden+Fibonacci, α≈1.37)
 Q     = 200_000.0    # DC capacity
 Q0    = 100_000.0    # reference capacity
 CBC_TIME_LIMIT = 120 # seconds per CBC run

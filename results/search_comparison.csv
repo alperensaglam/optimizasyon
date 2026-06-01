@@ -1,5 +1,5 @@
 method,dimensions,n_evaluations,final_L,optimal_alpha,optimal_Q
-Golden Section (1D),1D (α only),23,0.542344,1.7731,"fixed (200,000)"
-Fibonacci (1D),1D (α only),21,0.542344,1.7741,"fixed (200,000)"
-Nelder-Mead (2D),"2D (α, Q)",45,0.532195,1.4136,323087.0
-Grid Search (2D),"2D (α, Q)",25,0.557538,2.575,162500.0
+Golden Section (1D),1D (α only),23,0.525216,1.3664,"fixed (200,000)"
+Fibonacci (1D),1D (α only),21,0.525216,1.3662,"fixed (200,000)"
+Nelder-Mead (2D),"2D (α, Q)",61,0.589986,5.301,124964.0
+Grid Search (2D),"2D (α, Q)",100,0.511639,1.2,450000.0
